@@ -1,0 +1,23 @@
+# Items
+item.loco_steam.name=Steam Locomotive
+item.loco_steam.info=Idk what to put here...
+
+item.loco_diesel.name=Diesel Locomotive
+item.loco_diesel.info=Idk what to put here...
+
+# Blocks
+tile.table.name=Micro Rail Table §c§lWIP
+tile.table.info=When placed next to another table they will connected. But they can only be in a square formation!
+
+tile.controller.name=Micro Rail Controller §c§lWIP
+tile.controller.info=When placed with the blue & red wires connected to a corner of a table it will detect how many tables there are and the GUI will adapt and will add more slots to place rails and/or scenery. §c§lMax of a 3x3 table!
+
+tile.coal_generator.name=Coal Generator §c§lWIP
+tile.coal_generator.info=Burn coal to generate RF. 1 stack of coal will generate approx 130,000 RF.
+
+# Other
+item.show_info=Hold %s for Info
+
+itemGroup.microtab_blocks=Micro Trains Blocks
+itemGroup.microtab_locos=Micro Trains Locomotives
+itemGroup.microtab_rolling_stock=Micro Trains Rolling Stock

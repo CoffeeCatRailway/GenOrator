@@ -1,0 +1,14 @@
+{
+  "parent": "genOrator:share/block/display",
+  "textures": {
+    "particle": "minecraft:blocks/concrete_gray",
+    "power_out1": "minecraft:blocks/concrete_powder_orange",
+    "power_out2": "minecraft:blocks/concrete_powder_gray",
+    "front1": "minecraft:blocks/concrete_powder_black",
+    "front2": "minecraft:blocks/concrete_black",
+    "base": "minecraft:blocks/concrete_gray",
+    "red_wire": "minecraft:blocks/concrete_red",
+    "blue_wire": "minecraft:blocks/concrete_blue",
+    "access_door_hing": "minecraft:blocks/concrete_powder_silver"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "genOrator:share/block/display",
+  "textures": {
+    "particle": "minecraft:blocks/concrete_gray",
+    "base": "minecraft:blocks/concrete_gray",
+    "copper_wire": "minecraft:blocks/concrete_powder_orange"
+  }
+}

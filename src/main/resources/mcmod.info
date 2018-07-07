@@ -1,0 +1,13 @@
+[
+{
+  "modid": "genOrator",
+  "name": "GenOrator",
+  "description": "We have power!",
+  "version": "0.1",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "authorList": [ "CoffeeCatTeam", "CoffeeCatRailway", "MinecraftDoodler" ],
+  "credits": "Credit to Chisel & Bits for that mod was what we used to make the models!",
+  "logoFile": "logo.png"
+}
+]
