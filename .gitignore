@@ -20,3 +20,9 @@ build
 # other
 eclipse
 run
+.DS_store
+
+classes
+docs
+mod_build.bat
+libs
