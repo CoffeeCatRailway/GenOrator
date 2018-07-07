@@ -1,8 +1,11 @@
 package coffeecatteam.genOrator;
 
+import coffeecatteam.genOrator.init.InitBlock;
 import coffeecatteam.genOrator.proxy.ProxyCommon;
 import coffeecatteam.genOrator.util.GuiHandler;
 import coffeecatteam.genOrator.util.Utils;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -14,6 +17,13 @@ import org.apache.logging.log4j.Logger;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class GenOrator {
+
+    public static final CreativeTabs BLOCKS = new CreativeTabs("go_blocks") {
+        @Override
+        public ItemStack getTabIconItem() {
+            return new ItemStack(InitBlock.CABLE);
+        }
+    };
 
     public static Logger logger = Utils.getLogger();
 
