@@ -1,7 +1,7 @@
 [
 {
-  "modid": "genOrator",
-  "name": "GenOrator",
+  "modid": "gen_o_rator",
+  "name": "Gen-O-rator",
   "description": "We have power!",
   "version": "0.1",
   "mcversion": "${mcversion}",
