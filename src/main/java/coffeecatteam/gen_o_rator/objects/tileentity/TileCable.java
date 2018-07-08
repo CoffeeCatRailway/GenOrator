@@ -12,8 +12,8 @@ public class TileCable extends TileEnergyBase implements ITickable {
     @Override
     public void update() {
         if(this.world != null) {
-            this.receiveEnergy();
             this.outputEnergy();
+            this.receiveEnergy();
             this.markDirty();
         }
     }

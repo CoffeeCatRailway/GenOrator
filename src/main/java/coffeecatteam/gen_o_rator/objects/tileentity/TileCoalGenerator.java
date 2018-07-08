@@ -197,7 +197,9 @@ public class TileCoalGenerator extends TileEnergyInvBase implements ITickable {
 
     @Override
     public void update() {
-        if(this.world != null) {
+        boolean flag = this.isBurning();
+
+        if(!this.world.isRemote) {
             // Check if stored energy is greater then max capacity
             if (this.energyStorage.isFull()) {
                 this.energyStorage.setEnergy(this.energyStorage.getCapacity());
@@ -221,11 +223,12 @@ public class TileCoalGenerator extends TileEnergyInvBase implements ITickable {
                 }
 
                 // Add energy to storage if burning
-                if (isBurning() && this.burn) {
+                if (isBurning() && this.burn)
                     this.energyStorage.addEnergy(getEnergyFromCoal(stack) / 10);
-                    BlockCoalGenerator.setState(this.isBurning(), this.world, this.pos);
-                }
             }
+
+            if (flag != this.isBurning())
+                BlockCoalGenerator.setState(this.isBurning(), this.world, this.pos);
 
             // Output energy if stored energy is greater then 0
             if (this.energyStorage.getEnergyStored() > 0)
