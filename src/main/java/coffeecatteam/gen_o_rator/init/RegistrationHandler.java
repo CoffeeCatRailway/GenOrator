@@ -33,14 +33,7 @@ public class RegistrationHandler {
 
         @SubscribeEvent
         public static void registerModels(final ModelRegistryEvent event) {
-            for (Block block : BLOCKS)
-                registerBlockModel(block);
-        }
-
-        private static void registerBlockModel(final Block block) {
-            final String registryName = block.getRegistryName().toString();
-            final ModelResourceLocation location = new ModelResourceLocation(registryName, "inventory");
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, location);
+            BLOCKS.forEach(block -> Items.registerItemModel(Item.getItemFromBlock(block)));
         }
     }
 
@@ -59,11 +52,10 @@ public class RegistrationHandler {
 
         @SubscribeEvent
         public static void registerModels(final ModelRegistryEvent event) {
-            for (Item item : ITEMS)
-                registerItemModel(item);
+            ITEMS.forEach(Items::registerItemModel);
         }
 
-        private static void registerItemModel(final Item item) {
+        public static void registerItemModel(final Item item) {
             ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Reference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
         }
     }
