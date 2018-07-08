@@ -3,7 +3,7 @@
   "modid": "gen_o_rator",
   "name": "Gen-O-rator",
   "description": "We have power!",
-  "version": "0.1",
+  "version": "0.1-beta",
   "mcversion": "${mcversion}",
   "url": "",
   "authorList": [ "CoffeeCatTeam", "CoffeeCatRailway", "MinecraftDoodler" ],
