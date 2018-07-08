@@ -9,9 +9,9 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "0.1-beta"
+version = "v0.1-alpha"
 group = "coffeecatteam.gen_o_rator"
-archivesBaseName = "gen_o_rator"
+archivesBaseName = "GenOrator-${mcversion}"
 
 sourceCompatibility = targetCompatibility = '1.8'
 compileJava {
