@@ -28,7 +28,7 @@ import java.util.List;
 
 public abstract class BlockBaseFacingContainer extends BlockContainer {
 
-    private static final PropertyDirection FACING = BlockHorizontal.FACING;
+    protected static final PropertyDirection FACING = BlockHorizontal.FACING;
 
     public BlockBaseFacingContainer(String name, Material material) {
         this(name, material, 2.0F, 1.0F);
@@ -73,7 +73,7 @@ public abstract class BlockBaseFacingContainer extends BlockContainer {
     }
 
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, new IProperty[]{ FACING });
+        return new BlockStateContainer(this, FACING);
     }
 
     public void onBlockAdded(World world, BlockPos pos, IBlockState state) {

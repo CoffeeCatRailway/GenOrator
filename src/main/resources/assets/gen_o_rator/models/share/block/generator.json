@@ -1,5 +1,5 @@
 {
-  "parent": "genOrator:share/block/display",
+  "parent": "gen_o_rator:share/block/display",
   "textures": {
     "particle": "minecraft:blocks/concrete_gray",
     "power_out1": "minecraft:blocks/concrete_powder_orange",

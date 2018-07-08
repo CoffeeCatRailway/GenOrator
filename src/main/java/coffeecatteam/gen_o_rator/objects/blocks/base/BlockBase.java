@@ -25,7 +25,7 @@ public class BlockBase extends Block {
         setResistance(resistance);
         setCreativeTab(tab);
     }
-    
+
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         if (GuiScreen.isShiftKeyDown()) {

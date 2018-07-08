@@ -42,10 +42,13 @@ public class BlockCoalGenerator extends BlockBaseFacingContainer {
         TileEntity tileentity = world.getTileEntity(pos);
         keepInventory = true;
 
-        if (active)
+        if (active) {
             world.setBlockState(pos, InitBlock.COAL_GENERATOR_ON.getDefaultState(), 3);
-        else
+            world.setBlockState(pos, InitBlock.COAL_GENERATOR_ON.getDefaultState(), 3);
+        } else {
             world.setBlockState(pos, InitBlock.COAL_GENERATOR_OFF.getDefaultState(), 3);
+            world.setBlockState(pos, InitBlock.COAL_GENERATOR_OFF.getDefaultState(), 3);
+        }
 
         keepInventory = false;
 
@@ -64,6 +67,5 @@ public class BlockCoalGenerator extends BlockBaseFacingContainer {
                 world.updateComparatorOutputLevel(pos, this);
             }
         }
-        super.breakBlock(world, pos, state);
     }
 }
