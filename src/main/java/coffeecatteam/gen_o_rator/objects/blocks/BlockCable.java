@@ -4,12 +4,15 @@ import coffeecatteam.gen_o_rator.GenOrator;
 import coffeecatteam.gen_o_rator.objects.blocks.base.BlockBase;
 import coffeecatteam.gen_o_rator.objects.tileentity.TileCable;
 import coffeecatteam.gen_o_rator.util.aabb.Bounds;
+import coffeecatteam.gen_o_rator.util.iinterface.IOreDict;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -19,8 +22,9 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
+import java.util.List;
 
-public class BlockCable extends BlockBase implements ITileEntityProvider {
+public class BlockCable extends BlockBase implements ITileEntityProvider, IOreDict {
 
     public static final PropertyBool BACK = PropertyBool.create("back");
     public static final PropertyBool FORWARD = PropertyBool.create("forward");
@@ -29,15 +33,37 @@ public class BlockCable extends BlockBase implements ITileEntityProvider {
     public static final PropertyBool UP = PropertyBool.create("up");
     public static final PropertyBool DOWN = PropertyBool.create("down");
 
-    public BlockCable(String name) {
-        super(name, 0.1F, 1.0F, Material.ROCK, GenOrator.BLOCKS);
+    private String oreDict;
+    private int capacity, maxReceive, maxExtract;
+
+    public BlockCable(String name, String oreDict, int capacity, int maxReceive, int maxExtract) {
+        super("cable_" + name, 0.1F, 1.0F, Material.ROCK, GenOrator.TAB);
+        this.oreDict = oreDict;
+        this.capacity = capacity;
+        this.maxReceive = maxReceive;
+        this.maxExtract = maxExtract;
         this.setDefaultState(this.blockState.getBaseState().withProperty(BACK, false).withProperty(FORWARD, false).withProperty(LEFT, false).withProperty(RIGHT, false).withProperty(UP, false).withProperty(DOWN, false));
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+        int capacity = this.capacity;
+        int maxReceive = this.maxReceive;
+        int maxExtract = this.maxExtract;
+        tooltip.add("Max energy storage: §6" + capacity + "§r");
+        tooltip.add("Max energy receive: §6" + maxReceive + "§r");
+        tooltip.add("Max energy extract: §6" + maxExtract + "§r");
+    }
+
+    @Override
+    public String getOreDict() {
+        return this.oreDict;
     }
 
     @Nullable
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TileCable();
+        return new TileCable(this.capacity, this.maxReceive, this.maxExtract);
     }
 
     @Override
@@ -55,12 +81,13 @@ public class BlockCable extends BlockBase implements ITileEntityProvider {
 
     @Override
     public IBlockState getActualState(IBlockState state, IBlockAccess world, BlockPos pos) {
-        boolean back = world.getBlockState(pos.south()).getBlock() == this;
-        boolean forward = world.getBlockState(pos.north()).getBlock() == this;
-        boolean left = world.getBlockState(pos.west()).getBlock() == this;
-        boolean right = world.getBlockState(pos.east()).getBlock() == this;
-        boolean up = world.getBlockState(pos.up()).getBlock() == this;
-        boolean down = world.getBlockState(pos.down()).getBlock() == this;
+        boolean back = getNeighborState(EnumFacing.SOUTH, world, pos);
+        boolean forward = getNeighborState(EnumFacing.NORTH, world, pos);
+        boolean left = getNeighborState(EnumFacing.WEST, world, pos);
+        boolean right = getNeighborState(EnumFacing.EAST, world, pos);
+        boolean up = getNeighborState(EnumFacing.UP, world, pos);
+        boolean down = getNeighborState(EnumFacing.DOWN, world, pos);
+
         return state.withProperty(BACK, back).withProperty(FORWARD, forward).withProperty(LEFT, left).withProperty(RIGHT, right).withProperty(UP, up).withProperty(DOWN, down);
     }
 
@@ -94,12 +121,13 @@ public class BlockCable extends BlockBase implements ITileEntityProvider {
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess world, BlockPos pos) {
-        boolean back = world.getBlockState(pos.south()).getBlock() == this;
-        boolean forward = world.getBlockState(pos.north()).getBlock() == this;
-        boolean left = world.getBlockState(pos.west()).getBlock() == this;
-        boolean right = world.getBlockState(pos.east()).getBlock() == this;
-        boolean up = world.getBlockState(pos.up()).getBlock() == this;
-        boolean down = world.getBlockState(pos.down()).getBlock() == this;
+        boolean back = getNeighborState(EnumFacing.SOUTH, world, pos);
+        boolean forward = getNeighborState(EnumFacing.NORTH, world, pos);
+        boolean left = getNeighborState(EnumFacing.WEST, world, pos);
+        boolean right = getNeighborState(EnumFacing.EAST, world, pos);
+        boolean up = getNeighborState(EnumFacing.UP, world, pos);
+        boolean down = getNeighborState(EnumFacing.DOWN, world, pos);
+
         AxisAlignedBB box = STAR.toAABB();
 
         /* Dot & Star */
@@ -150,5 +178,30 @@ public class BlockCable extends BlockBase implements ITileEntityProvider {
             box = CORNER_DOUBLE_BOTTOM.getRotation(EnumFacing.EAST);
 
         return box;
+    }
+
+    private boolean getNeighborState(EnumFacing facing, IBlockAccess world, BlockPos pos) {
+        boolean neighbor = false;
+        switch (facing) {
+            case SOUTH:
+                neighbor = world.getBlockState(pos.south()).getBlock() instanceof BlockCable;
+                break;
+            case NORTH:
+                neighbor = world.getBlockState(pos.north()).getBlock() instanceof BlockCable;
+                break;
+            case WEST:
+                neighbor = world.getBlockState(pos.west()).getBlock() instanceof BlockCable;
+                break;
+            case EAST:
+                neighbor = world.getBlockState(pos.east()).getBlock() instanceof BlockCable;
+                break;
+            case UP:
+                neighbor = world.getBlockState(pos.up()).getBlock() instanceof BlockCable;
+                break;
+            case DOWN:
+                neighbor = world.getBlockState(pos.down()).getBlock() instanceof BlockCable;
+                break;
+        }
+        return neighbor;
     }
 }

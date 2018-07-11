@@ -1,12 +1,13 @@
 package coffeecatteam.gen_o_rator.objects.tileentity;
 
 import coffeecatteam.gen_o_rator.objects.tileentity.base.TileEnergyBase;
+import coffeecatteam.gen_o_rator.util.enums.EnumCableType;
 import net.minecraft.util.ITickable;
 
 public class TileCable extends TileEnergyBase implements ITickable {
 
-    public TileCable() {
-        super(1000, 50, 50, 0);
+    public TileCable(int capacity, int maxReceive, int maxExtract) {
+        super(capacity, maxReceive, maxExtract, 0);
     }
 
     @Override

@@ -1,8 +1,0 @@
-{
-  "variants": {
-      "facing=north": { "model": "gen_o_rator:coal_generator_on", "y": 180 },
-      "facing=south": { "model": "gen_o_rator:coal_generator_on" },
-      "facing=west":  { "model": "gen_o_rator:coal_generator_on", "y": 90 },
-      "facing=east":  { "model": "gen_o_rator:coal_generator_on", "y": 270 }
-  }
-}

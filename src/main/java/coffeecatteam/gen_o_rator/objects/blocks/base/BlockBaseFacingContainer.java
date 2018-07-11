@@ -4,7 +4,6 @@ import coffeecatteam.gen_o_rator.GenOrator;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -40,7 +39,7 @@ public abstract class BlockBaseFacingContainer extends BlockContainer {
         setRegistryName(name);
         setHardness(hardness);
         setResistance(resistance);
-        setCreativeTab(GenOrator.BLOCKS);
+        setCreativeTab(GenOrator.TAB);
         this.setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 

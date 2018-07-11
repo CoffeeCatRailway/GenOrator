@@ -1,0 +1,83 @@
+{
+  "variants": {
+    "back=false,down=false,forward=false,left=false,right=false,up=false": { "model": "gen_o_rator:cable/silver/dot","uvlock": true},
+    "back=true,down=true,forward=true,left=true,right=true,up=true": { "model": "gen_o_rator:cable/silver/star", "uvlock": true},
+
+    "back=false,down=true,forward=false,left=false,right=false,up=false": { "model": "gen_o_rator:cable/silver/single", "uvlock": true},
+    "back=true,down=false,forward=false,left=false,right=false,up=false": { "model": "gen_o_rator:cable/silver/single", "x": 90, "uvlock": true},
+    "back=false,down=false,forward=false,left=false,right=false,up=true": { "model": "gen_o_rator:cable/silver/single", "x": 180, "uvlock": true},
+    "back=false,down=false,forward=true,left=false,right=false,up=false": { "model": "gen_o_rator:cable/silver/single", "x": 270, "uvlock": true},
+    "back=false,down=false,forward=false,left=true,right=false,up=false": { "model": "gen_o_rator:cable/silver/single", "x": 90, "y": 90, "uvlock": true},
+    "back=false,down=false,forward=false,left=false,right=true,up=false": { "model": "gen_o_rator:cable/silver/single", "x": 270, "y": 90, "uvlock": true},
+
+    "back=false,down=true,forward=false,left=false,right=false,up=true": { "model": "gen_o_rator:cable/silver/double", "uvlock": true},
+    "back=true,down=false,forward=true,left=false,right=false,up=false": { "model": "gen_o_rator:cable/silver/double", "x": 90, "uvlock": true},
+    "back=false,down=false,forward=false,left=true,right=true,up=false": { "model": "gen_o_rator:cable/silver/double", "x": 90, "y": 90, "uvlock": true},
+
+    "back=false,down=true,forward=false,left=true,right=false,up=false": { "model": "gen_o_rator:cable/silver/corner", "uvlock": true},
+    "back=false,down=true,forward=true,left=false,right=false,up=false": { "model": "gen_o_rator:cable/silver/corner", "y": 90, "uvlock": true},
+    "back=false,down=true,forward=false,left=false,right=true,up=false": { "model": "gen_o_rator:cable/silver/corner", "y": 180, "uvlock": true},
+    "back=true,down=true,forward=false,left=false,right=false,up=false": { "model": "gen_o_rator:cable/silver/corner", "y": 270, "uvlock": true},
+
+    "back=false,down=false,forward=false,left=true,right=false,up=true": { "model": "gen_o_rator:cable/silver/corner", "x": 180, "uvlock": true},
+    "back=false,down=false,forward=true,left=false,right=false,up=true": { "model": "gen_o_rator:cable/silver/corner", "x": 180, "y": 90, "uvlock": true},
+    "back=false,down=false,forward=false,left=false,right=true,up=true": { "model": "gen_o_rator:cable/silver/corner", "x": 180, "y": 180, "uvlock": true},
+    "back=true,down=false,forward=false,left=false,right=false,up=true": { "model": "gen_o_rator:cable/silver/corner", "x": 180, "y": 270, "uvlock": true},
+
+    "back=true,down=false,forward=false,left=true,right=false,up=false": { "model": "gen_o_rator:cable/silver/corner", "x": 90, "uvlock": true},
+    "back=false,down=false,forward=true,left=true,right=false,up=false": { "model": "gen_o_rator:cable/silver/corner", "x": 90, "y": 90, "uvlock": true},
+    "back=false,down=false,forward=true,left=false,right=true,up=false": { "model": "gen_o_rator:cable/silver/corner", "x": 90, "y": 180, "uvlock": true},
+    "back=true,down=false,forward=false,left=false,right=true,up=false": { "model": "gen_o_rator:cable/silver/corner", "x": 90, "y": 270, "uvlock": true},
+
+    "back=false,down=true,forward=true,left=true,right=false,up=false": { "model": "gen_o_rator:cable/silver/corner_double", "uvlock": true},
+    "back=false,down=true,forward=true,left=false,right=true,up=false": { "model": "gen_o_rator:cable/silver/corner_double", "y": 90, "uvlock": true},
+    "back=true,down=true,forward=false,left=false,right=true,up=false": { "model": "gen_o_rator:cable/silver/corner_double", "y": 180, "uvlock": true},
+    "back=true,down=true,forward=false,left=true,right=false,up=false": { "model": "gen_o_rator:cable/silver/corner_double", "y": 270, "uvlock": true},
+
+    "back=true,down=false,forward=false,left=true,right=false,up=true": { "model": "gen_o_rator:cable/silver/corner_double", "x": 180, "uvlock": true},
+    "back=false,down=false,forward=true,left=true,right=false,up=true": { "model": "gen_o_rator:cable/silver/corner_double", "x": 180, "y": 90, "uvlock": true},
+    "back=false,down=false,forward=true,left=false,right=true,up=true": { "model": "gen_o_rator:cable/silver/corner_double", "x": 180, "y": 180, "uvlock": true},
+    "back=true,down=false,forward=false,left=false,right=true,up=true": { "model": "gen_o_rator:cable/silver/corner_double", "x": 180, "y": 270, "uvlock": true},
+
+    "back=false,down=true,forward=true,left=true,right=true,up=false": { "model": "gen_o_rator:cable/silver/corner_t_joint", "uvlock": true},
+    "back=true,down=true,forward=false,left=true,right=true,up=false": { "model": "gen_o_rator:cable/silver/corner_t_joint", "x": 90, "uvlock": true},
+    "back=true,down=false,forward=false,left=true,right=true,up=true": { "model": "gen_o_rator:cable/silver/corner_t_joint", "x": 180, "uvlock": true},
+    "back=false,down=false,forward=true,left=true,right=true,up=true": { "model": "gen_o_rator:cable/silver/corner_t_joint", "x": 270, "uvlock": true},
+
+    "back=true,down=true,forward=true,left=false,right=true,up=false": { "model": "gen_o_rator:cable/silver/corner_t_joint", "y": 90, "uvlock": true},
+    "back=true,down=true,forward=true,left=true,right=false,up=false": { "model": "gen_o_rator:cable/silver/corner_t_joint", "x": 90, "y": 90, "uvlock": true},
+    "back=true,down=false,forward=true,left=true,right=false,up=true": { "model": "gen_o_rator:cable/silver/corner_t_joint", "x": 180, "y": 90, "uvlock": true},
+    "back=true,down=false,forward=true,left=false,right=true,up=true": { "model": "gen_o_rator:cable/silver/corner_t_joint", "x": 270, "y": 90, "uvlock": true},
+
+    "back=false,down=true,forward=true,left=false,right=true,up=true": { "model": "gen_o_rator:cable/silver/corner_t_joint_z", "uvlock": true},
+    "back=true,down=true,forward=false,left=false,right=true,up=true": { "model": "gen_o_rator:cable/silver/corner_t_joint_z", "y": 90, "uvlock": true},
+    "back=true,down=true,forward=false,left=true,right=false,up=true": { "model": "gen_o_rator:cable/silver/corner_t_joint_z", "y": 180, "uvlock": true},
+    "back=false,down=true,forward=true,left=true,right=false,up=true": { "model": "gen_o_rator:cable/silver/corner_t_joint_z", "y": 270, "uvlock": true},
+
+    "back=false,down=true,forward=false,left=true,right=true,up=false": { "model": "gen_o_rator:cable/silver/t_joint", "uvlock": true},
+    "back=false,down=false,forward=false,left=true,right=true,up=true": { "model": "gen_o_rator:cable/silver/t_joint", "x": 180, "uvlock": true},
+    "back=true,down=true,forward=true,left=false,right=false,up=false": { "model": "gen_o_rator:cable/silver/t_joint", "y": 90, "uvlock": true},
+    "back=true,down=false,forward=true,left=false,right=false,up=true": { "model": "gen_o_rator:cable/silver/t_joint", "x": 180, "y": 90, "uvlock": true},
+
+    "back=true,down=false,forward=false,left=true,right=true,up=false": { "model": "gen_o_rator:cable/silver/t_joint", "x": 90, "uvlock": true},
+    "back=false,down=false,forward=true,left=true,right=true,up=false": { "model": "gen_o_rator:cable/silver/t_joint", "x": 90, "y": 180, "uvlock": true},
+    "back=true,down=false,forward=true,left=true,right=false,up=false": { "model": "gen_o_rator:cable/silver/t_joint", "x": 90, "y": 90, "uvlock": true},
+    "back=true,down=false,forward=true,left=false,right=true,up=false": { "model": "gen_o_rator:cable/silver/t_joint", "x": 90, "y": 270, "uvlock": true},
+
+    "back=false,down=true,forward=false,left=false,right=true,up=true": { "model": "gen_o_rator:cable/silver/t_joint_z", "uvlock": true},
+    "back=true,down=true,forward=false,left=false,right=false,up=true": { "model": "gen_o_rator:cable/silver/t_joint_z", "y": 90, "uvlock": true},
+    "back=false,down=true,forward=false,left=true,right=false,up=true": { "model": "gen_o_rator:cable/silver/t_joint_z", "y": 180, "uvlock": true},
+    "back=false,down=true,forward=true,left=false,right=false,up=true": { "model": "gen_o_rator:cable/silver/t_joint_z", "y": 270, "uvlock": true},
+
+    "back=false,down=true,forward=false,left=true,right=true,up=true": { "model": "gen_o_rator:cable/silver/x_joint", "uvlock": true},
+    "back=true,down=true,forward=true,left=false,right=false,up=true": { "model": "gen_o_rator:cable/silver/x_joint", "y": 90, "uvlock": true},
+    "back=true,down=false,forward=true,left=true,right=true,up=false": { "model": "gen_o_rator:cable/silver/x_joint", "x": 90, "uvlock": true},
+
+    "back=true,down=true,forward=true,left=true,right=true,up=false": { "model": "gen_o_rator:cable/silver/xt_joint", "uvlock": true},
+    "back=true,down=false,forward=true,left=true,right=true,up=true": { "model": "gen_o_rator:cable/silver/xt_joint", "x": 180, "uvlock": true},
+    "back=true,down=true,forward=false,left=true,right=true,up=true": { "model": "gen_o_rator:cable/silver/xt_joint", "x": 90, "uvlock": true},
+    "back=false,down=true,forward=true,left=true,right=true,up=true": { "model": "gen_o_rator:cable/silver/xt_joint", "x": 90, "y": 180, "uvlock": true},
+    "back=true,down=true,forward=true,left=false,right=true,up=true": { "model": "gen_o_rator:cable/silver/xt_joint", "x": 90, "y": 270, "uvlock": true},
+    "back=true,down=true,forward=true,left=true,right=false,up=true": { "model": "gen_o_rator:cable/silver/xt_joint", "x": 90, "y": 90, "uvlock": true}
+  }
+}

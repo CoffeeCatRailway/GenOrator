@@ -7,20 +7,22 @@ import coffeecatteam.gen_o_rator.objects.tileentity.TileCable;
 import coffeecatteam.gen_o_rator.objects.tileentity.TileCoalGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemSlab;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class InitBlock {
 
-    public static final Block COAL_GENERATOR_OFF = new BlockCoalGenerator("coal_generator_off");
-    public static final Block COAL_GENERATOR_ON = new BlockCoalGenerator("coal_generator_on");
-    public static final Block CABLE = new BlockCable("cable");
+    /* Generators */
+    public static final Block COAL_GENERATOR = new BlockCoalGenerator("coal_generator");
+
+    // Cables
+    public static final Block CABLE_IRON = new BlockCable("iron", "blockCable", 500, 50, 50);
+    public static final Block CABLE_SILVER = new BlockCable("silver", "blockCable", 1000, 50, 100);
+    public static final Block CABLE_ALUMINIUM = new BlockCable("aluminium", "blockCable", 1500, 100, 150);
+    public static final Block CABLE_COPPER = new BlockCable("copper", "blockCable", 2000, 200, 200);
 
 	public static void init() {
-        register(COAL_GENERATOR_OFF, CABLE);
-
-        ForgeRegistries.BLOCKS.register(COAL_GENERATOR_ON);
+        register(COAL_GENERATOR);
+        register(CABLE_IRON, CABLE_SILVER, CABLE_ALUMINIUM, CABLE_COPPER);
 	}
 
 	public static void registerTileEntities() {
@@ -38,13 +40,4 @@ public class InitBlock {
         ItemBlock itemBlock = (ItemBlock) new ItemBlock(block).setRegistryName(block.getRegistryName());
         RegistrationHandler.Items.ITEMS.add(itemBlock);
     }
-
-	public static void registerItemBlock(Block block, ItemBlock itemblock) {
-		ForgeRegistries.BLOCKS.register(block);
-		itemblock.setRegistryName(block.getRegistryName());
-		ForgeRegistries.ITEMS.register(itemblock);
-		
-		if (itemblock instanceof ItemSlab)
-			RegistrationHandler.Items.ITEMS.add(itemblock);
-	}
 }

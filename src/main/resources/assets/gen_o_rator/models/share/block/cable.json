@@ -3,6 +3,6 @@
   "textures": {
     "particle": "minecraft:blocks/concrete_gray",
     "base": "minecraft:blocks/concrete_gray",
-    "copper_wire": "minecraft:blocks/concrete_powder_orange"
+    "wire": "gen_o_rator:blocks/wire_iron"
   }
 }

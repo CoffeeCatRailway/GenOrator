@@ -1,6 +1,9 @@
 {
   "parent": "gen_o_rator:share/block/cable",
   "source": "[120, -38, 99, 98, 22, -56, -51, -52, 75, 77, 46, 74, 76, 43, 81, 53, 118, 76, -52, 44, -78, 103, -112, 71, 22, 73, -50, -49, 75, 46, 74, 45, 73, -75, 79, -50, -49, -55, 47, -78, 77, 47, 74, -84, 100, -48, -64, -90, 32, -66, 32, -65, 60, 37, -75, 8, -86, 46, -65, 40, 49, 47, 61, -107, -31, 0, -45, 27, 38, 6, -75, 25, 12, 8, 60, -123, 1, -107, 15, -60, 98, 72, 108, 108, 64, 52, -124, -127, 65, 106, 9, 42, 86, 5, -118, 105, 45, -127, 96, -104, 24, 72, 29, 54, 0, 50, 87, 107, 5, 2, 75, -83, -64, 20, -45, 90, -127, -37, 126, 74, -11, 99, 115, 63, 46, 49, 92, -10, -29, 10, 47, 112, 120, 2, -19, 86, -115, 0, -13, 1, 102, -54, 83, 110]",
+  "textures": {
+    "wire": "gen_o_rator:blocks/wire_silver"
+  },
   "elements": [
     {
       "from": [
@@ -996,7 +999,7 @@
             7,
             11
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -1020,7 +1023,7 @@
             10,
             11
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -1044,7 +1047,7 @@
             11,
             10
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -1068,7 +1071,7 @@
             7,
             9
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -1092,7 +1095,7 @@
             10,
             9
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -1116,7 +1119,7 @@
             10,
             6
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -1140,7 +1143,7 @@
             7,
             6
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -1164,7 +1167,7 @@
             11,
             7
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -1188,7 +1191,7 @@
             11,
             8
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1211,7 +1214,7 @@
             10,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1234,7 +1237,7 @@
             10,
             8
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1257,7 +1260,7 @@
             9,
             12
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1280,7 +1283,7 @@
             6,
             12
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1303,7 +1306,7 @@
             7,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1326,7 +1329,7 @@
             6,
             13
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1349,7 +1352,7 @@
             7,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1372,7 +1375,7 @@
             10,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1395,7 +1398,7 @@
             11,
             9
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1418,7 +1421,7 @@
             7,
             6
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1441,7 +1444,7 @@
             10,
             6
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1464,7 +1467,7 @@
             11,
             7
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1487,7 +1490,7 @@
             7,
             9
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1510,7 +1513,7 @@
             10,
             9
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1533,7 +1536,7 @@
             10,
             11
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1556,7 +1559,7 @@
             7,
             11
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1579,7 +1582,7 @@
             11,
             10
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1602,7 +1605,7 @@
             7,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1625,7 +1628,7 @@
             10,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1648,7 +1651,7 @@
             10,
             7
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1671,7 +1674,7 @@
             10,
             11
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1694,7 +1697,7 @@
             11,
             12
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1717,7 +1720,7 @@
             7,
             9
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1740,7 +1743,7 @@
             10,
             6
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1763,7 +1766,7 @@
             7,
             6
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1786,7 +1789,7 @@
             10,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1809,7 +1812,7 @@
             7,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1832,7 +1835,7 @@
             10,
             12
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1855,7 +1858,7 @@
             7,
             7
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1878,7 +1881,7 @@
             7,
             8
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1901,7 +1904,7 @@
             11,
             13
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     }

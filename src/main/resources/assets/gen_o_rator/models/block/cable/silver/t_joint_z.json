@@ -1,6 +1,9 @@
 {
   "parent": "gen_o_rator:share/block/cable",
-  "source": "[120, -38, -91, -111, -79, 10, -62, 48, 16, -122, 15, -59, -35, 65, 59, -72, 56, 41, -46, -43, 89, -118, -17, 96, 92, -91, -44, 88, 90, -76, -111, 32, -120, -17, -47, -95, 15, 16, 37, 6, 31, -46, 26, -17, 52, 22, 11, 22, 3, 31, 57, -62, -1, -25, -65, 92, 90, -19, -18, 46, -55, 120, 36, -61, -51, 97, 52, -99, -121, -119, 12, 96, -24, -98, 68, 34, -117, 36, 63, -16, 32, 18, 91, 33, 103, -79, 12, 79, 48, -7, 38, 88, -19, -59, 113, -51, 37, -22, -124, 12, -77, -104, 67, -17, -42, -127, 113, 1, -48, 95, -128, -35, -35, -6, -41, -11, -48, 14, 84, -119, 70, 84, 67, 127, 14, -32, -105, 30, 95, 63, 105, -22, -9, 48, -33, 71, 26, -25, -109, -97, -14, 117, -67, -97, 102, -28, -27, -81, -6, 122, 41, -128, 45, 115, 48, -87, -78, 48, -66, 0, 115, 33, 93, -15, -10, -48, 108, 7, -54, -55, 43, -11, 70, 65, 106, -47, -120, -78, -9, -67, 116, 4, -3, 11, -11, -119, 126, -125, 62, -125, 80, -3, -95, -93, 55, -3, -21, 119, -5, 71, 88, -86, -79, -1, 55, -116, -71, -17, -84, -12, 95, -127, -26, 119, 45, 51, 31, -80, 115, -3, -4, -18, -36, 51, -94, -87]",
+  "source": "[120, -38, 99, 98, 22, -56, -51, -52, 75, 77, 46, 74, 76, 43, 81, 53, 118, 76, -52, 44, -78, 103, -112, 71, 22, 73, -50, -49, 75, 46, 74, 45, 73, -75, 79, -50, -49, -55, 47, -78, 77, 47, 74, -84, 100, -48, -64, -90, 32, -66, 32, -65, 60, 37, -75, 8, -86, 46, -65, 40, 49, 47, 61, -107, -31, 0, 83, 3, 51, -125, -38, 12, 6, 48, 22, -101, -62, 0, 99, -81, 92, 54, -125, 33, 52, 108, 10, -61, -86, -84, 21, 96, 28, -102, 26, -62, -80, 106, 25, 76, -35, 12, -72, 58, 48, 22, 13, 97, 96, -112, 90, 2, -63, 90, 43, -128, 120, 9, 67, -24, -86, 37, 12, 89, 96, -68, 2, -118, -105, -128, -51, -125, -85, -125, 97, -112, 94, -112, 25, 96, 125, 43, -32, -6, 87, 65, -11, -83, -126, 98, 24, 27, 69, -99, -44, 10, -124, 27, 40, -47, -113, -20, 126, 40, 14, -51, 90, 1, 117, 63, 2, -121, -122, 34, -5, 19, -51, -3, 104, 24, 22, 126, 43, -127, 118, -126, 112, -24, 82, -36, -31, 7, 0, -53, 72, -115, 31]",
+  "textures": {
+    "wire": "gen_o_rator:blocks/wire_silver"
+  },
   "elements": [
     {
       "from": [
@@ -21,7 +24,7 @@
             7,
             11
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -45,7 +48,7 @@
             10,
             11
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -69,7 +72,7 @@
             11,
             10
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -93,7 +96,7 @@
             7,
             9
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -117,7 +120,7 @@
             10,
             9
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -141,7 +144,7 @@
             10,
             6
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -165,7 +168,7 @@
             7,
             6
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -189,7 +192,7 @@
             11,
             7
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "down"
         }
       }
@@ -213,7 +216,7 @@
             7,
             6
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "up"
         }
       }
@@ -237,7 +240,7 @@
             10,
             6
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "up"
         }
       }
@@ -261,7 +264,7 @@
             11,
             7
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "up"
         }
       }
@@ -285,7 +288,7 @@
             7,
             9
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "up"
         }
       }
@@ -309,7 +312,7 @@
             10,
             9
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "up"
         }
       }
@@ -333,7 +336,7 @@
             10,
             11
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "up"
         }
       }
@@ -357,7 +360,7 @@
             7,
             11
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "up"
         }
       }
@@ -381,200 +384,8 @@
             11,
             10
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "up"
-        }
-      }
-    },
-    {
-      "from": [
-        6,
-        5,
-        0
-      ],
-      "to": [
-        7,
-        6,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            9,
-            10,
-            10,
-            11
-          ],
-          "texture": "#copper_wire",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        9,
-        5,
-        0
-      ],
-      "to": [
-        10,
-        6,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            6,
-            10,
-            7,
-            11
-          ],
-          "texture": "#copper_wire",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        6,
-        0
-      ],
-      "to": [
-        11,
-        7,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            5,
-            9,
-            11,
-            10
-          ],
-          "texture": "#copper_wire",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        6,
-        7,
-        0
-      ],
-      "to": [
-        7,
-        9,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            9,
-            7,
-            10,
-            9
-          ],
-          "texture": "#copper_wire",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        9,
-        7,
-        0
-      ],
-      "to": [
-        10,
-        9,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            6,
-            7,
-            7,
-            9
-          ],
-          "texture": "#copper_wire",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        9,
-        10,
-        0
-      ],
-      "to": [
-        10,
-        11,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            6,
-            5,
-            7,
-            6
-          ],
-          "texture": "#copper_wire",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        6,
-        10,
-        0
-      ],
-      "to": [
-        7,
-        11,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            9,
-            5,
-            10,
-            6
-          ],
-          "texture": "#copper_wire",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        9,
-        0
-      ],
-      "to": [
-        11,
-        10,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            5,
-            6,
-            11,
-            7
-          ],
-          "texture": "#copper_wire",
-          "cullface": "north"
         }
       }
     },
@@ -597,7 +408,7 @@
             11,
             10
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "east"
         }
       }
@@ -621,7 +432,7 @@
             11,
             7
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "east"
         }
       }
@@ -645,7 +456,7 @@
             10,
             11
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "east"
         }
       }
@@ -669,7 +480,7 @@
             9,
             10
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "east"
         }
       }
@@ -693,7 +504,7 @@
             9,
             7
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "east"
         }
       }
@@ -717,7 +528,7 @@
             6,
             7
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "east"
         }
       }
@@ -741,7 +552,7 @@
             6,
             10
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "east"
         }
       }
@@ -765,238 +576,8 @@
             7,
             11
           ],
-          "texture": "#copper_wire",
+          "texture": "#wire",
           "cullface": "east"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        6,
-        0
-      ],
-      "to": [
-        11,
-        7,
-        1
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            15,
-            9,
-            16,
-            10
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        9,
-        0
-      ],
-      "to": [
-        11,
-        10,
-        1
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            15,
-            6,
-            16,
-            7
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        6,
-        1
-      ],
-      "to": [
-        11,
-        10,
-        2
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            14,
-            6,
-            15,
-            10
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        12,
-        10
-      ],
-      "to": [
-        11,
-        13,
-        11
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            5,
-            3,
-            6,
-            4
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        9,
-        2
-      ],
-      "to": [
-        11,
-        10,
-        5
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            11,
-            6,
-            14,
-            7
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        5,
-        3
-      ],
-      "to": [
-        11,
-        7,
-        4
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            12,
-            9,
-            13,
-            11
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        6,
-        4
-      ],
-      "to": [
-        11,
-        7,
-        5
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            11,
-            9,
-            12,
-            10
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        0,
-        9
-      ],
-      "to": [
-        11,
-        5,
-        10
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            6,
-            11,
-            7,
-            16
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        11,
-        9
-      ],
-      "to": [
-        11,
-        13,
-        10
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            6,
-            3,
-            7,
-            5
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        14,
-        9
-      ],
-      "to": [
-        11,
-        16,
-        10
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            6,
-            0,
-            7,
-            2
-          ],
-          "texture": "#copper_wire"
         }
       }
     },
@@ -1019,7 +600,7 @@
             11,
             14
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1042,7 +623,7 @@
             11,
             4
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1065,7 +646,7 @@
             10,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1088,7 +669,7 @@
             10,
             5
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1111,237 +692,99 @@
             9,
             2
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
     {
       "from": [
-        5,
-        6,
-        0
-      ],
-      "to": [
-        5,
-        7,
-        2
-      ],
-      "faces": {
-        "west": {
-          "uv": [
-            0,
-            9,
-            2,
-            10
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        9,
-        0
-      ],
-      "to": [
-        5,
-        10,
-        3
-      ],
-      "faces": {
-        "west": {
-          "uv": [
-            0,
-            6,
-            3,
-            7
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        9,
+        11,
+        12,
         10
       ],
       "to": [
-        5,
-        10,
+        11,
+        13,
         11
       ],
       "faces": {
-        "west": {
+        "east": {
           "uv": [
-            10,
-            6,
-            11,
-            7
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        5,
-        2
-      ],
-      "to": [
-        5,
-        7,
-        3
-      ],
-      "faces": {
-        "west": {
-          "uv": [
-            2,
-            9,
+            5,
             3,
-            11
+            6,
+            4
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
     {
       "from": [
-        5,
-        6,
-        10
-      ],
-      "to": [
-        5,
-        7,
-        11
-      ],
-      "faces": {
-        "west": {
-          "uv": [
-            10,
-            9,
-            11,
-            10
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        6,
+        11,
+        14,
         9
       ],
       "to": [
-        5,
+        11,
         16,
         10
       ],
       "faces": {
-        "west": {
+        "east": {
           "uv": [
-            9,
+            6,
             0,
-            10,
-            10
+            7,
+            2
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
     {
       "from": [
-        5,
+        11,
         0,
         9
       ],
       "to": [
-        5,
+        11,
         5,
         10
       ],
       "faces": {
-        "west": {
+        "east": {
           "uv": [
-            9,
+            6,
             11,
-            10,
+            7,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
     {
       "from": [
-        5,
-        6,
-        3
-      ],
-      "to": [
-        5,
-        10,
-        4
-      ],
-      "faces": {
-        "west": {
-          "uv": [
-            3,
-            6,
-            4,
-            10
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        4,
-        7
-      ],
-      "to": [
-        5,
-        5,
+        11,
+        11,
         9
       ],
-      "faces": {
-        "west": {
-          "uv": [
-            7,
-            11,
-            9,
-            12
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        6,
-        4
-      ],
       "to": [
-        5,
-        7,
-        5
+        11,
+        13,
+        10
       ],
       "faces": {
-        "west": {
+        "east": {
           "uv": [
-            4,
-            9,
-            5,
-            10
+            6,
+            3,
+            7,
+            5
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1364,7 +807,7 @@
             6,
             14
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1372,6 +815,29 @@
       "from": [
         5,
         6,
+        5
+      ],
+      "to": [
+        5,
+        7,
+        6
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            5,
+            9,
+            6,
+            10
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        9,
         5
       ],
       "to": [
@@ -1385,9 +851,9 @@
             5,
             6,
             6,
-            10
+            7
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1410,7 +876,7 @@
             7,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1433,7 +899,7 @@
             7,
             12
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1456,329 +922,260 @@
             7,
             7
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
     {
       "from": [
-        6,
-        11,
-        0
-      ],
-      "to": [
-        7,
-        11,
-        5
-      ],
-      "faces": {
-        "up": {
-          "uv": [
-            6,
-            0,
-            7,
-            5
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        9,
-        11,
-        0
-      ],
-      "to": [
-        10,
-        11,
-        5
-      ],
-      "faces": {
-        "up": {
-          "uv": [
-            9,
-            0,
-            10,
-            5
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        11,
-        6
-      ],
-      "to": [
-        16,
-        11,
+        5,
+        4,
         7
       ],
-      "faces": {
-        "up": {
-          "uv": [
-            11,
-            6,
-            16,
-            7
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        11,
-        9
-      ],
       "to": [
-        16,
-        11,
-        10
-      ],
-      "faces": {
-        "up": {
-          "uv": [
-            11,
-            9,
-            16,
-            10
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        6,
         5,
-        0
-      ],
-      "to": [
-        7,
-        5,
-        2
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            6,
-            14,
-            7,
-            16
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        9,
-        5,
-        0
-      ],
-      "to": [
-        10,
-        5,
-        3
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            9,
-            13,
-            10,
-            16
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        12,
-        5,
-        10
-      ],
-      "to": [
-        13,
-        5,
-        11
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            12,
-            5,
-            13,
-            6
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        12,
-        5,
-        6
-      ],
-      "to": [
-        16,
-        5,
-        7
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            12,
-            9,
-            16,
-            10
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        5,
-        2
-      ],
-      "to": [
-        7,
-        5,
-        3
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            5,
-            13,
-            7,
-            14
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
         5,
         9
       ],
-      "to": [
-        16,
-        5,
-        10
-      ],
       "faces": {
-        "down": {
+        "west": {
           "uv": [
-            11,
-            6,
-            16,
-            7
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        12,
-        5,
-        5
-      ],
-      "to": [
-        13,
-        5,
-        6
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            12,
-            10,
-            13,
-            11
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        6,
-        5,
-        3
-      ],
-      "to": [
-        7,
-        5,
-        5
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            6,
-            11,
             7,
-            13
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        9,
-        5,
-        3
-      ],
-      "to": [
-        11,
-        5,
-        4
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            9,
-            12,
             11,
-            13
-          ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        9,
-        5,
-        4
-      ],
-      "to": [
-        10,
-        5,
-        5
-      ],
-      "faces": {
-        "down": {
-          "uv": [
             9,
-            11,
-            10,
             12
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        9,
+        10
+      ],
+      "to": [
+        5,
+        10,
+        11
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            10,
+            6,
+            11,
+            7
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        6,
+        10
+      ],
+      "to": [
+        5,
+        7,
+        11
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            10,
+            9,
+            11,
+            10
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        9
+      ],
+      "to": [
+        5,
+        5,
+        10
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            9,
+            11,
+            10,
+            16
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        6,
+        9
+      ],
+      "to": [
+        5,
+        16,
+        10
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            9,
+            0,
+            10,
+            10
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        11,
+        11,
+        6
+      ],
+      "to": [
+        16,
+        11,
+        7
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            11,
+            6,
+            16,
+            7
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        11,
+        11,
+        9
+      ],
+      "to": [
+        16,
+        11,
+        10
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            11,
+            9,
+            16,
+            10
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        12,
+        5,
+        5
+      ],
+      "to": [
+        13,
+        5,
+        6
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            12,
+            10,
+            13,
+            11
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        12,
+        5,
+        6
+      ],
+      "to": [
+        16,
+        5,
+        7
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            12,
+            9,
+            16,
+            10
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        12,
+        5,
+        10
+      ],
+      "to": [
+        13,
+        5,
+        11
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            12,
+            5,
+            13,
+            6
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        11,
+        5,
+        9
+      ],
+      "to": [
+        16,
+        5,
+        10
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            11,
+            6,
+            16,
+            7
+          ],
+          "texture": "#wire"
         }
       }
     },
@@ -1801,7 +1198,7 @@
             7,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1824,7 +1221,7 @@
             10,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1847,7 +1244,7 @@
             10,
             6
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1870,7 +1267,7 @@
             16,
             7
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1893,7 +1290,7 @@
             10,
             3
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1916,7 +1313,7 @@
             16,
             10
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1939,7 +1336,7 @@
             11,
             4
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1962,7 +1359,7 @@
             7,
             6
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -1985,7 +1382,7 @@
             7,
             10
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2008,7 +1405,7 @@
             10,
             7
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2031,7 +1428,7 @@
             13,
             9
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2054,7 +1451,7 @@
             13,
             11
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2077,7 +1474,7 @@
             10,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2100,7 +1497,7 @@
             7,
             16
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2123,14 +1520,14 @@
             7,
             3
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
     {
       "from": [
         6,
-        11,
+        10,
         5
       ],
       "to": [
@@ -2144,9 +1541,9 @@
             9,
             0,
             10,
-            5
+            6
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2169,7 +1566,7 @@
             11,
             14
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2192,7 +1589,7 @@
             7,
             14
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2204,41 +1601,18 @@
       ],
       "to": [
         7,
-        5,
+        6,
         5
       ],
       "faces": {
         "north": {
           "uv": [
             9,
-            11,
+            10,
             10,
             13
           ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        9,
-        11,
-        5
-      ],
-      "to": [
-        10,
-        12,
-        5
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            6,
-            4,
-            7,
-            5
-          ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2250,18 +1624,18 @@
       ],
       "to": [
         10,
-        5,
+        6,
         5
       ],
       "faces": {
         "north": {
           "uv": [
             6,
-            11,
+            10,
             7,
             13
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2284,7 +1658,99 @@
             5,
             7
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        9,
+        5
+      ],
+      "to": [
+        10,
+        10,
+        5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            6,
+            6,
+            11,
+            7
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        9,
+        10,
+        5
+      ],
+      "to": [
+        10,
+        12,
+        5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            6,
+            4,
+            7,
+            6
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        11,
+        7,
+        5
+      ],
+      "to": [
+        12,
+        9,
+        5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            7,
+            5,
+            9
+          ],
+          "texture": "#wire"
+        }
+      }
+    },
+    {
+      "from": [
+        9,
+        6,
+        5
+      ],
+      "to": [
+        16,
+        7,
+        5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            9,
+            7,
+            10
+          ],
+          "texture": "#wire"
         }
       }
     },
@@ -2307,30 +1773,7 @@
             7,
             4
           ],
-          "texture": "#copper_wire"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        7,
-        5
-      ],
-      "to": [
-        12,
-        9,
-        5
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            4,
-            7,
-            5,
-            9
-          ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2353,30 +1796,30 @@
             4,
             11
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
     {
       "from": [
-        11,
+        5,
         6,
         5
       ],
       "to": [
-        16,
+        7,
         7,
         5
       ],
       "faces": {
         "north": {
           "uv": [
-            0,
             9,
-            5,
+            9,
+            11,
             10
           ],
-          "texture": "#copper_wire"
+          "texture": "#wire"
         }
       }
     },
@@ -2814,222 +2257,6 @@
     },
     {
       "from": [
-        5,
-        5,
-        0
-      ],
-      "to": [
-        6,
-        6,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            10,
-            10,
-            11,
-            11
-          ],
-          "texture": "#base",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        7,
-        5,
-        0
-      ],
-      "to": [
-        9,
-        6,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            7,
-            10,
-            9,
-            11
-          ],
-          "texture": "#base",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        10,
-        5,
-        0
-      ],
-      "to": [
-        11,
-        6,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            5,
-            10,
-            6,
-            11
-          ],
-          "texture": "#base",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        7,
-        0
-      ],
-      "to": [
-        6,
-        9,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            10,
-            7,
-            11,
-            9
-          ],
-          "texture": "#base",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        7,
-        7,
-        0
-      ],
-      "to": [
-        9,
-        9,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            7,
-            7,
-            9,
-            9
-          ],
-          "texture": "#base",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        10,
-        7,
-        0
-      ],
-      "to": [
-        11,
-        9,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            5,
-            7,
-            6,
-            9
-          ],
-          "texture": "#base",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        10,
-        10,
-        0
-      ],
-      "to": [
-        11,
-        11,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            5,
-            5,
-            6,
-            6
-          ],
-          "texture": "#base",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        7,
-        10,
-        0
-      ],
-      "to": [
-        9,
-        11,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            7,
-            5,
-            9,
-            6
-          ],
-          "texture": "#base",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        10,
-        0
-      ],
-      "to": [
-        6,
-        11,
-        0
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            10,
-            5,
-            11,
-            6
-          ],
-          "texture": "#base",
-          "cullface": "north"
-        }
-      }
-    },
-    {
-      "from": [
         16,
         5,
         5
@@ -3247,21 +2474,21 @@
     {
       "from": [
         11,
-        5,
-        0
+        0,
+        5
       ],
       "to": [
         11,
-        6,
-        2
+        2,
+        6
       ],
       "faces": {
         "east": {
           "uv": [
+            10,
             14,
-            10,
-            16,
-            11
+            11,
+            16
           ],
           "texture": "#base"
         }
@@ -3270,21 +2497,21 @@
     {
       "from": [
         11,
-        7,
-        0
+        3,
+        5
       ],
       "to": [
         11,
-        9,
-        1
+        5,
+        7
       ],
       "faces": {
         "east": {
           "uv": [
-            15,
-            7,
-            16,
-            9
+            9,
+            11,
+            11,
+            13
           ],
           "texture": "#base"
         }
@@ -3292,22 +2519,45 @@
     },
     {
       "from": [
-        11,
-        10,
-        0
-      ],
-      "to": [
         11,
         11,
         5
       ],
+      "to": [
+        11,
+        12,
+        6
+      ],
       "faces": {
         "east": {
           "uv": [
+            10,
+            4,
             11,
-            5,
-            16,
-            6
+            5
+          ],
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
+        11,
+        13,
+        5
+      ],
+      "to": [
+        11,
+        16,
+        6
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            10,
+            0,
+            11,
+            3
           ],
           "texture": "#base"
         }
@@ -3339,228 +2589,44 @@
     {
       "from": [
         11,
+        0,
+        7
+      ],
+      "to": [
+        11,
         5,
-        2
-      ],
-      "to": [
-        11,
-        9,
-        3
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            13,
-            7,
-            14,
-            11
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        11,
-        10
-      ],
-      "to": [
-        11,
-        12,
-        11
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            5,
-            4,
-            6,
-            5
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        7,
-        3
-      ],
-      "to": [
-        11,
-        9,
-        5
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            11,
-            7,
-            13,
-            9
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        13,
         9
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            7,
+            11,
+            9,
+            16
+          ],
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
+        11,
+        11,
+        7
       ],
       "to": [
         11,
         14,
-        10
+        9
       ],
       "faces": {
         "east": {
           "uv": [
-            6,
-            2,
             7,
-            3
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        0,
-        10
-      ],
-      "to": [
-        11,
-        5,
-        11
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            5,
-            11,
-            6,
-            16
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        5,
-        4
-      ],
-      "to": [
-        11,
-        6,
-        5
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            11,
-            10,
-            12,
-            11
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        0,
-        5
-      ],
-      "to": [
-        11,
-        2,
-        6
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            10,
-            14,
-            11,
-            16
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        3,
-        5
-      ],
-      "to": [
-        11,
-        5,
-        7
-      ],
-      "faces": {
-        "east": {
-          "uv": [
+            2,
             9,
-            11,
-            11,
-            13
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        11,
-        5
-      ],
-      "to": [
-        11,
-        12,
-        6
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            10,
-            4,
-            11,
             5
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        13,
-        5
-      ],
-      "to": [
-        11,
-        16,
-        6
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            10,
-            0,
-            11,
-            3
           ],
           "texture": "#base"
         }
@@ -3592,43 +2658,20 @@
     {
       "from": [
         11,
-        0,
-        7
+        11,
+        10
       ],
       "to": [
         11,
-        5,
-        9
+        12,
+        11
       ],
       "faces": {
         "east": {
           "uv": [
-            7,
-            11,
-            9,
-            16
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        11,
-        7
-      ],
-      "to": [
-        11,
-        14,
-        9
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            7,
-            2,
-            9,
+            5,
+            4,
+            6,
             5
           ],
           "texture": "#base"
@@ -3637,136 +2680,21 @@
     },
     {
       "from": [
-        5,
-        5,
-        0
-      ],
-      "to": [
-        5,
-        6,
-        2
-      ],
-      "faces": {
-        "west": {
-          "uv": [
-            0,
-            10,
-            2,
-            11
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        7,
-        0
-      ],
-      "to": [
-        5,
-        9,
-        3
-      ],
-      "faces": {
-        "west": {
-          "uv": [
-            0,
-            7,
-            3,
-            9
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        10,
-        0
-      ],
-      "to": [
-        5,
         11,
-        4
-      ],
-      "faces": {
-        "west": {
-          "uv": [
-            0,
-            5,
-            4,
-            6
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        10,
-        10
-      ],
-      "to": [
-        5,
-        16,
-        11
-      ],
-      "faces": {
-        "west": {
-          "uv": [
-            10,
-            0,
-            11,
-            6
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        7,
-        10
-      ],
-      "to": [
-        5,
-        9,
-        11
-      ],
-      "faces": {
-        "west": {
-          "uv": [
-            10,
-            7,
-            11,
-            9
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
         0,
         10
       ],
       "to": [
+        11,
         5,
-        6,
         11
       ],
       "faces": {
-        "west": {
+        "east": {
           "uv": [
-            10,
-            10,
+            5,
             11,
+            6,
             16
           ],
           "texture": "#base"
@@ -3775,91 +2703,22 @@
     },
     {
       "from": [
-        5,
-        5,
+        11,
+        13,
         9
       ],
       "to": [
-        5,
-        6,
+        11,
+        14,
         10
       ],
       "faces": {
-        "west": {
+        "east": {
           "uv": [
-            9,
-            10,
-            10,
-            11
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        5,
-        3
-      ],
-      "to": [
-        5,
-        6,
-        5
-      ],
-      "faces": {
-        "west": {
-          "uv": [
-            3,
-            10,
-            5,
-            11
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        5,
-        7
-      ],
-      "to": [
-        5,
-        16,
-        9
-      ],
-      "faces": {
-        "west": {
-          "uv": [
+            6,
+            2,
             7,
-            0,
-            9,
-            11
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        7,
-        4
-      ],
-      "to": [
-        5,
-        11,
-        5
-      ],
-      "faces": {
-        "west": {
-          "uv": [
-            4,
-            5,
-            5,
-            9
+            3
           ],
           "texture": "#base"
         }
@@ -3914,6 +2773,29 @@
     {
       "from": [
         5,
+        7,
+        5
+      ],
+      "to": [
+        5,
+        9,
+        7
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            5,
+            7,
+            7,
+            9
+          ],
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
         10,
         5
       ],
@@ -3960,21 +2842,21 @@
     {
       "from": [
         5,
-        7,
-        6
+        10,
+        10
       ],
       "to": [
         5,
-        9,
-        7
+        16,
+        11
       ],
       "faces": {
         "west": {
           "uv": [
-            6,
-            7,
-            7,
-            9
+            10,
+            0,
+            11,
+            6
           ],
           "texture": "#base"
         }
@@ -4006,44 +2888,21 @@
     {
       "from": [
         5,
-        11,
-        0
+        5,
+        7
       ],
       "to": [
-        6,
-        11,
-        5
+        5,
+        16,
+        9
       ],
       "faces": {
-        "up": {
-          "uv": [
-            5,
-            0,
-            6,
-            5
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        7,
-        11,
-        0
-      ],
-      "to": [
-        9,
-        11,
-        5
-      ],
-      "faces": {
-        "up": {
+        "west": {
           "uv": [
             7,
             0,
             9,
-            5
+            11
           ],
           "texture": "#base"
         }
@@ -4051,45 +2910,91 @@
     },
     {
       "from": [
-        10,
-        11,
-        0
+        5,
+        7,
+        10
       ],
       "to": [
+        5,
+        9,
+        11
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            10,
+            7,
+            11,
+            9
+          ],
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        5,
+        9
+      ],
+      "to": [
+        5,
+        6,
+        10
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            9,
+            10,
+            10,
+            11
+          ],
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        10
+      ],
+      "to": [
+        5,
+        6,
+        11
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            10,
+            10,
+            11,
+            16
+          ],
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
         11,
         11,
         5
       ],
-      "faces": {
-        "up": {
-          "uv": [
-            10,
-            0,
-            11,
-            5
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        11,
-        10
-      ],
       "to": [
         16,
         11,
-        11
+        6
       ],
       "faces": {
         "up": {
           "uv": [
             11,
-            10,
+            5,
             16,
-            11
+            6
           ],
           "texture": "#base"
         }
@@ -4122,155 +3027,17 @@
       "from": [
         11,
         11,
-        5
+        10
       ],
       "to": [
         16,
         11,
-        6
+        11
       ],
       "faces": {
         "up": {
           "uv": [
             11,
-            5,
-            16,
-            6
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        5,
-        5,
-        0
-      ],
-      "to": [
-        6,
-        5,
-        2
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            5,
-            14,
-            6,
-            16
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        7,
-        5,
-        0
-      ],
-      "to": [
-        9,
-        5,
-        5
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            7,
-            11,
-            9,
-            16
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        10,
-        5,
-        0
-      ],
-      "to": [
-        11,
-        5,
-        3
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            10,
-            13,
-            11,
-            16
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        13,
-        5,
-        10
-      ],
-      "to": [
-        16,
-        5,
-        11
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            13,
-            5,
-            16,
-            6
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        5,
-        10
-      ],
-      "to": [
-        12,
-        5,
-        11
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            11,
-            5,
-            12,
-            6
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        13,
-        5,
-        5
-      ],
-      "to": [
-        16,
-        5,
-        6
-      ],
-      "faces": {
-        "down": {
-          "uv": [
-            13,
             10,
             16,
             11
@@ -4304,22 +3071,45 @@
     },
     {
       "from": [
-        5,
-        5,
-        3
-      ],
-      "to": [
-        6,
+        13,
         5,
         5
+      ],
+      "to": [
+        16,
+        5,
+        6
       ],
       "faces": {
         "down": {
           "uv": [
+            13,
+            10,
+            16,
+            11
+          ],
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
+        13,
+        5,
+        10
+      ],
+      "to": [
+        16,
+        5,
+        11
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            13,
             5,
-            11,
-            6,
-            13
+            16,
+            6
           ],
           "texture": "#base"
         }
@@ -4350,22 +3140,22 @@
     },
     {
       "from": [
-        10,
-        5,
-        4
-      ],
-      "to": [
         11,
         5,
-        5
+        10
+      ],
+      "to": [
+        12,
+        5,
+        11
       ],
       "faces": {
         "down": {
           "uv": [
-            10,
             11,
-            11,
-            12
+            5,
+            12,
+            6
           ],
           "texture": "#base"
         }
@@ -4701,14 +3491,14 @@
       ],
       "to": [
         9,
-        5,
+        7,
         5
       ],
       "faces": {
         "north": {
           "uv": [
             7,
-            11,
+            9,
             9,
             16
           ],
@@ -4765,7 +3555,7 @@
     {
       "from": [
         7,
-        11,
+        10,
         5
       ],
       "to": [
@@ -4779,7 +3569,7 @@
             7,
             0,
             9,
-            5
+            6
           ],
           "texture": "#base"
         }
@@ -4788,7 +3578,7 @@
     {
       "from": [
         5,
-        11,
+        10,
         5
       ],
       "to": [
@@ -4802,7 +3592,7 @@
             10,
             0,
             11,
-            5
+            6
           ],
           "texture": "#base"
         }
@@ -4839,16 +3629,39 @@
       ],
       "to": [
         6,
-        5,
+        6,
         5
       ],
       "faces": {
         "north": {
           "uv": [
             10,
-            11,
+            10,
             11,
             13
+          ],
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
+        10,
+        10,
+        5
+      ],
+      "to": [
+        16,
+        11,
+        5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            5,
+            6,
+            6
           ],
           "texture": "#base"
         }
@@ -4872,29 +3685,6 @@
             11,
             6,
             13
-          ],
-          "texture": "#base"
-        }
-      }
-    },
-    {
-      "from": [
-        11,
-        10,
-        5
-      ],
-      "to": [
-        16,
-        11,
-        5
-      ],
-      "faces": {
-        "north": {
-          "uv": [
-            0,
-            5,
-            5,
-            6
           ],
           "texture": "#base"
         }
@@ -4925,7 +3715,53 @@
     },
     {
       "from": [
+        10,
+        9,
+        5
+      ],
+      "to": [
         11,
+        10,
+        5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            5,
+            6,
+            6,
+            7
+          ],
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        7,
+        5
+      ],
+      "to": [
+        11,
+        9,
+        5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            5,
+            7,
+            11,
+            9
+          ],
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
+        10,
         5,
         5
       ],
@@ -4939,7 +3775,7 @@
           "uv": [
             4,
             10,
-            5,
+            6,
             11
           ],
           "texture": "#base"

@@ -36,7 +36,7 @@ public class TileCoalGenerator extends TileEnergyInvBase implements ITickable {
 
     @Override
     public String getName() {
-        return InitBlock.COAL_GENERATOR_OFF.getUnlocalizedName() + ".name";
+        return InitBlock.COAL_GENERATOR.getUnlocalizedName() + ".name";
     }
 
     @Override
@@ -176,9 +176,8 @@ public class TileCoalGenerator extends TileEnergyInvBase implements ITickable {
                 return this.cooldown;
             case 3:
                 return this.maxCooldown;
-            default:
-                return super.getField(id);
         }
+        return super.getField(id);
     }
 
     @Override
@@ -192,14 +191,11 @@ public class TileCoalGenerator extends TileEnergyInvBase implements ITickable {
                 this.maxCooldown = value;
                 break;
         }
-        this.markDirty();
     }
 
     @Override
     public void update() {
-        boolean flag = this.isBurning();
-
-        if(!this.world.isRemote) {
+        if(this.world != null) {
             // Check if stored energy is greater then max capacity
             if (this.energyStorage.isFull()) {
                 this.energyStorage.setEnergy(this.energyStorage.getCapacity());
@@ -226,9 +222,6 @@ public class TileCoalGenerator extends TileEnergyInvBase implements ITickable {
                 if (isBurning() && this.burn)
                     this.energyStorage.addEnergy(getEnergyFromCoal(stack) / 10);
             }
-
-            if (flag != this.isBurning())
-                BlockCoalGenerator.setState(this.isBurning(), this.world, this.pos);
 
             // Output energy if stored energy is greater then 0
             if (this.energyStorage.getEnergyStored() > 0)

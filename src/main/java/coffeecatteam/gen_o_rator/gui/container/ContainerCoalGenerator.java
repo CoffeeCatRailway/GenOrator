@@ -27,9 +27,8 @@ public class ContainerCoalGenerator extends Container {
     private boolean performMerge(int slotIndex, ItemStack stack) {
         int size = generator.getSizeInventory();
 
-        if (slotIndex < size) {
+        if (slotIndex < size)
             return mergeItemStack(stack, size, size + 26, true);
-        }
         return mergeItemStack(stack, 0, size, false);
     }
 
