@@ -1,7 +1,8 @@
 package coffeecatteam.gen_o_rator.init;
 
 import coffeecatteam.gen_o_rator.Reference;
-import coffeecatteam.gen_o_rator.util.IOreDict;
+import coffeecatteam.gen_o_rator.util.iinterface.IOreDict;
+import coffeecatteam.gen_o_rator.util.iinterface.SubModels;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -56,7 +57,11 @@ public class RegistrationHandler {
         }
 
         public static void registerItemModel(final Item item) {
-            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Reference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+            if (item instanceof SubModels) {
+                ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(((SubModels) item).getModel(), "inventory"));
+            } else {
+                ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Reference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+            }
         }
     }
 
