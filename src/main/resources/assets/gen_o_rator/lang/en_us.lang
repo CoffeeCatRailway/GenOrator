@@ -1,11 +1,15 @@
 # Items
 
 # Blocks
-tile.coal_generator_off.name=Coal Generator §c§lWIP
-tile.coal_generator_on.name=Coal Generator §c§lWIP
-tile.coal_generator_off.info=Burn coal to generate RF. 1 stack of coal will generate approx 130,000 RF.
+tile.coal_generator.name=Coal Generator §c§lWIP§r
+tile.coal_generator.info=Burn coal to generate RF. 1 stack of coal will generate approx 130,000 RF.
+
+tile.cable_iron.name=Iron Cable
+tile.cable_silver.name=Iron Silver
+tile.cable_aluminium.name=Iron Aluminium
+tile.cable_copper.name=Iron Copper
 
 # Other
 item.show_info=Hold %s for Info
 
-itemGroup.go_blocks=Gen-O-rator Blocks
+itemGroup.go_tab=Gen-O-rator
