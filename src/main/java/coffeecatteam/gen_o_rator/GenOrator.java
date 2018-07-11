@@ -18,10 +18,10 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class GenOrator {
 
-    public static final CreativeTabs BLOCKS = new CreativeTabs("go_blocks") {
+    public static final CreativeTabs TAB = new CreativeTabs("go_tab") {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(InitBlock.CABLE);
+            return new ItemStack(InitBlock.COAL_GENERATOR);
         }
     };
 
