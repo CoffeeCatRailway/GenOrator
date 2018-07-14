@@ -47,7 +47,8 @@ public class RegistrationHandler {
             for (Item item : ITEMS) {
                 event.getRegistry().register(item);
                 if (item instanceof IOreDict)
-                    OreDictionary.registerOre(((IOreDict) item).getOreDict(), item);
+                    if(!((IOreDict) item).getOreDict().equals(""))
+                        OreDictionary.registerOre(((IOreDict) item).getOreDict(), item);
             }
         }
 
