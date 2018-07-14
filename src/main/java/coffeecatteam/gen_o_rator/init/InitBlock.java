@@ -38,7 +38,7 @@ public class InitBlock {
 
         register(ORE_SILVER, ORE_ALUMINIUM, ORE_COPPER);
 
-        register(DRIED_UP_LOG);
+        //register(DRIED_UP_LOG);
 	}
 
 	public static void registerTileEntities() {
