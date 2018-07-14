@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y": { "model": "gen_o_rator:dried_up_log" },
+        "axis=z": { "model": "gen_o_rator:dried_up_log", "x": 90  },
+        "axis=x": { "model": "gen_o_rator:dried_up_log", "x": 90, "y": 90 },
+        "axis=none": { "model": "gen_o_rator:dried_up_log" }
+    }
+}

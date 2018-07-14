@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "gen_o_rator:blocks/dried_up_log_top",
+        "side": "gen_o_rator:blocks/dried_up_log"
+    }
+}
