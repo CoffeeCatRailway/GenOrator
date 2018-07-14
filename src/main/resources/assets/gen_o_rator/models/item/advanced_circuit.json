@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gen_o_rator:items/blank_circuit",
+    "layer1": "gen_o_rator:items/advanced_circuit"
+  }
+}

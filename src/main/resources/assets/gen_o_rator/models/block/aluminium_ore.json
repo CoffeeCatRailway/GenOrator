@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "gen_o_rator:blocks/aluminium_ore"
+    }
+}

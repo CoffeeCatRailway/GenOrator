@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "gen_o_rator:sap_collector",
+    "data": 0
+  },
+  "pattern": [
+    "www",
+    "  w"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "w": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    }
+  }
+}

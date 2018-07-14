@@ -4,9 +4,9 @@
     "data": 0
   },
   "pattern": [
-    "idi",
-    "rfr",
-    "ici"
+    "iri",
+    "cfc",
+    "bcm"
   ],
   "type": "forge:ore_shaped",
   "key": {
@@ -14,20 +14,24 @@
       "item": "minecraft:iron_ingot",
       "data": 0
     },
-    "d": {
-      "item": "minecraft:iron_trapdoor",
-      "data": 0
-    },
-    "r": {
-      "item": "minecraft:redstone",
-      "data": 0
-    },
     "f": {
       "item": "minecraft:furnace",
       "data": 0
     },
+    "r": {
+      "item": "gen_o_rator:rf_converter",
+      "data": 0
+    },
+     "m": {
+      "item": "gen_o_rator:motor",
+      "data": 0
+    },
     "c": {
-      "item": "minecraft:clay_ball",
+      "item": "gen_o_rator:energy_connector",
+      "data": 0
+    },
+    "b": {
+      "item": "gen_o_rator:basic_circuit",
       "data": 0
     }
   }
