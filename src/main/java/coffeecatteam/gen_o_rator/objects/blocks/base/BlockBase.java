@@ -1,6 +1,7 @@
 package coffeecatteam.gen_o_rator.objects.blocks.base;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -17,32 +18,15 @@ import java.util.List;
 
 public class BlockBase extends Block {
 
-    public BlockBase(String name, float hardness, float resistance, Material material, CreativeTabs tab) {
+    public BlockBase(String name, float hardness, float resistance, Material material, boolean isWooden, int harvestLevel, CreativeTabs tab) {
         super(material);
         setUnlocalizedName(name);
         setRegistryName(name);
         setHardness(hardness);
         setResistance(resistance);
+        setHarvestLevel(isWooden ? "axe" : "pickaxe", harvestLevel);
+        if (isWooden)
+            setSoundType(SoundType.WOOD);
         setCreativeTab(tab);
-    }
-
-    @Override
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        if (GuiScreen.isShiftKeyDown()) {
-            String info = I18n.format(this.getUnlocalizedName() + ".info");
-            tooltip.addAll(Minecraft.getMinecraft().fontRenderer.listFormattedStringToWidth(info, 150));
-        } else {
-            tooltip.add(TextFormatting.YELLOW + I18n.format("item.show_info", "SHIFT"));
-        }
-    }
-
-    @Override
-    public boolean isOpaqueCube(IBlockState state) {
-        return false;
-    }
-
-    @Override
-    public boolean isFullCube(IBlockState state) {
-        return false;
     }
 }

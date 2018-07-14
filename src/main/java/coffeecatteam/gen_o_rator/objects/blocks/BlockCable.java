@@ -37,7 +37,7 @@ public class BlockCable extends BlockBase implements ITileEntityProvider, IOreDi
     private int capacity, maxReceive, maxExtract;
 
     public BlockCable(String name, String oreDict, int capacity, int maxReceive, int maxExtract) {
-        super("cable_" + name, 0.1F, 1.0F, Material.ROCK, GenOrator.TAB);
+        super("cable_" + name, 0.1F, 1.0F, Material.ROCK, false, 1, GenOrator.TAB);
         this.oreDict = oreDict;
         this.capacity = capacity;
         this.maxReceive = maxReceive;

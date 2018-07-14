@@ -12,13 +12,23 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class BlockBaseFacing extends BlockBase {
+public class BlockBaseFacing extends BlockBaseInfo {
 
     private static final PropertyDirection FACING = BlockHorizontal.FACING;
 
-    public BlockBaseFacing(String name, float hardness, float resistance, Material material, CreativeTabs tab) {
-        super(name, hardness, resistance, material, tab);
+    public BlockBaseFacing(String name, float hardness, float resistance, Material material, boolean isWooden, int harvestLevel, CreativeTabs tab) {
+        super(name, hardness, resistance, material, isWooden, harvestLevel, tab);
         this.setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+    }
+
+    @Override
+    public boolean isOpaqueCube(IBlockState state) {
+        return false;
+    }
+
+    @Override
+    public boolean isFullCube(IBlockState state) {
+        return false;
     }
 
     public IBlockState getStateFromMeta(int meta) {
