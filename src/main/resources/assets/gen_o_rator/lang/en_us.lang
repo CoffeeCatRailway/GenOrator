@@ -1,13 +1,39 @@
 # Items
+item.ingot_silver.name=Silver Ingot
+item.ingot_aluminium.name=Aluminium Ingot
+item.ingot_copper.name=Copper Ingot
+
+item.wire_iron.name=Iron Wire
+item.wire_silver.name=Silver Wire
+item.wire_aluminium.name=Aluminium Wire
+item.wire_copper.name=Copper Wire
+
+item.rf_converter.name=RF Converter
+item.motor.name=Motor
+item.energy_connector.name=Energy Connector
+
+item.blank_circuit.name=Blank Circuit Board
+item.basic_circuit.name=Basic Circuit
+item.advanced_circuit.name=Advanced Circuit
+
+item.tree_sap.name=Tree Sap
+item.rubber.name=Rubber
+item.plastic.name=Plastic
+
+item.sap_collector.name=Sap Collector
 
 # Blocks
 tile.coal_generator.name=Coal Generator §c§lWIP§r
 tile.coal_generator.info=Burn coal to generate RF. 1 stack of coal will generate approx 130,000 RF.
 
 tile.cable_iron.name=Iron Cable
-tile.cable_silver.name=Iron Silver
-tile.cable_aluminium.name=Iron Aluminium
-tile.cable_copper.name=Iron Copper
+tile.cable_silver.name=Silver Cable
+tile.cable_aluminium.name=Aluminium Cable
+tile.cable_copper.name=Copper Cable
+
+tile.silver_ore.name=Silver Ore
+tile.aluminium_ore.name=Aluminum Ore
+tile.copper_ore.name=Copper Ore
 
 # Other
 item.show_info=Hold %s for Info
