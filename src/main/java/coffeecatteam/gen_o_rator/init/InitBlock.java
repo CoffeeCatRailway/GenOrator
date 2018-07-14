@@ -11,12 +11,14 @@ import coffeecatteam.gen_o_rator.objects.tileentity.TileCoalGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class InitBlock {
 
     /* Generators */
     public static final Block COAL_GENERATOR = new BlockCoalGenerator("coal_generator");
+    public static final Block COAL_GENERATOR_ACTIVE = new BlockCoalGenerator("coal_generator_active");
 
     /* Cables */
     public static final Block CABLE_IRON = new BlockCable("iron", "blockCable", 500, 50, 50);
@@ -33,7 +35,7 @@ public class InitBlock {
     public static final Block DRIED_UP_LOG = new BlockDriedUpLog("dried_up_log", GenOrator.TAB);
 
 	public static void init() {
-        register(COAL_GENERATOR);
+        registerGenerator(COAL_GENERATOR, COAL_GENERATOR_ACTIVE);
         register(CABLE_IRON, CABLE_SILVER, CABLE_ALUMINIUM, CABLE_COPPER);
 
         register(ORE_SILVER, ORE_ALUMINIUM, ORE_COPPER);
@@ -44,6 +46,11 @@ public class InitBlock {
 	public static void registerTileEntities() {
         GameRegistry.registerTileEntity(TileCoalGenerator.class, Reference.MODID+":coal_generator");
         GameRegistry.registerTileEntity(TileCable.class, Reference.MODID+":cable");
+    }
+
+    private static void registerGenerator(Block idle, Block active) {
+	    register(idle);
+        ForgeRegistries.BLOCKS.register(active);
     }
 
     private static void register(Block... blocks) {

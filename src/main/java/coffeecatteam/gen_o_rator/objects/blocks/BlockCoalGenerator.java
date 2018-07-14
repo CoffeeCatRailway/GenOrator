@@ -22,6 +22,8 @@ import javax.annotation.Nullable;
 
 public class BlockCoalGenerator extends BlockBaseFacingContainer {
 
+    private static boolean keepInventory;
+
     public BlockCoalGenerator(String name) {
         super(name, Material.IRON);
     }
@@ -41,8 +43,33 @@ public class BlockCoalGenerator extends BlockBaseFacingContainer {
 
     @Override
     public void breakBlockAb(World world, BlockPos pos, IBlockState state) {
+        if (!keepInventory) {
+            TileEntity tileentity = world.getTileEntity(pos);
+            if (tileentity instanceof TileCoalGenerator) {
+                InventoryHelper.dropInventoryItems(world, pos, (TileCoalGenerator) tileentity);
+                world.updateComparatorOutputLevel(pos, this);
+            }
+        }
+    }
+
+    public static void setState(boolean active, World world, BlockPos pos) {
         TileEntity tileentity = world.getTileEntity(pos);
-        InventoryHelper.dropInventoryItems(world, pos, (TileCoalGenerator) tileentity);
-        world.updateComparatorOutputLevel(pos, this);
+        IBlockState iblockstate = world.getBlockState(pos);
+        keepInventory = true;
+
+        if (active) {
+            world.setBlockState(pos, InitBlock.COAL_GENERATOR_ACTIVE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            world.setBlockState(pos, InitBlock.COAL_GENERATOR_ACTIVE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+        } else {
+            world.setBlockState(pos, InitBlock.COAL_GENERATOR.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            world.setBlockState(pos, InitBlock.COAL_GENERATOR.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+        }
+
+        keepInventory = false;
+
+        if (tileentity != null) {
+            tileentity.validate();
+            world.setTileEntity(pos, tileentity);
+        }
     }
 }

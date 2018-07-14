@@ -24,6 +24,7 @@ item.sap_collector.name=Sap Collector
 
 # Blocks
 tile.coal_generator.name=Coal Generator §c§lWIP§r
+tile.coal_generator_active.name=Coal Generator §c§lWIP§r
 tile.coal_generator.info=Burn coal to generate RF. 1 stack of coal will generate approx 130,000 RF.
 
 tile.cable_iron.name=Iron Cable

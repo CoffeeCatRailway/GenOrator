@@ -2,10 +2,12 @@ package coffeecatteam.gen_o_rator.gui;
 
 import coffeecatteam.gen_o_rator.Reference;
 import coffeecatteam.gen_o_rator.gui.container.ContainerCoalGenerator;
+import coffeecatteam.gen_o_rator.init.InitBlock;
 import coffeecatteam.gen_o_rator.objects.tileentity.TileCoalGenerator;
 import coffeecatteam.gen_o_rator.util.Utils;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -40,7 +42,7 @@ public class GuiCoalGenerator extends GuiContainer {
 
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-        String teName = this.generator.getDisplayName().getUnformattedText();
+        String teName = I18n.format(InitBlock.COAL_GENERATOR.getUnlocalizedName() + ".name");
         fontRenderer.drawString(teName, 8, 6, 0x040404);
         fontRenderer.drawString(inventory.getDisplayName().getUnformattedText(), 8, 72, 0x040404);
 
