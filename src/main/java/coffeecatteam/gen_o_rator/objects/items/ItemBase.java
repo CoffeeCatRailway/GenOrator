@@ -1,33 +1,22 @@
 package coffeecatteam.gen_o_rator.objects.items;
 
-import coffeecatteam.gen_o_rator.GenOrator;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.resources.I18n;
-import net.minecraft.client.util.ITooltipFlag;
+import coffeecatteam.gen_o_rator.util.iinterface.IOreDict;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.World;
 
-import javax.annotation.Nullable;
-import java.util.List;
+public class ItemBase extends Item implements IOreDict {
 
-public class ItemBase extends Item {
+    private String oredict;
 
-    public ItemBase(String name) {
+    public ItemBase(String name, String oredict, CreativeTabs tab) {
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(GenOrator.BLOCKS);
+        setCreativeTab(tab);
+        this.oredict = oredict;
     }
 
     @Override
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        if (GuiScreen.isShiftKeyDown()) {
-            String info = I18n.format(this.getUnlocalizedName() + ".info");
-            tooltip.addAll(Minecraft.getMinecraft().fontRenderer.listFormattedStringToWidth(info, 150));
-        } else {
-            tooltip.add(TextFormatting.YELLOW + I18n.format("item.show_info", "SHIFT"));
-        }
+    public String getOreDict() {
+        return this.oredict;
     }
 }
