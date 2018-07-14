@@ -14,6 +14,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -27,6 +28,7 @@ import java.util.List;
 
 public abstract class BlockBaseGenerator extends BlockContainer {
 
+    protected static boolean keepInventory;
     protected static final PropertyDirection FACING = BlockHorizontal.FACING;
 
     public BlockBaseGenerator(String name, Material material) {
@@ -42,6 +44,14 @@ public abstract class BlockBaseGenerator extends BlockContainer {
         setCreativeTab(GenOrator.TAB);
         this.setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
+
+    @Nullable
+    @Override
+    public TileEntity createNewTileEntity(World world, int meta) {
+        return createNewTileEntityAb(world, meta);
+    }
+
+    public abstract TileEntity createNewTileEntityAb(World world, int meta);
 
     public abstract boolean onBlockActivatedAb(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ);
 

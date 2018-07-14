@@ -4,13 +4,12 @@ import coffeecatteam.gen_o_rator.init.InitBlock;
 import coffeecatteam.gen_o_rator.objects.blocks.BlockCoalGenerator;
 import coffeecatteam.gen_o_rator.objects.tileentity.base.TileEnergyInvBase;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.ITickable;
@@ -197,7 +196,7 @@ public class TileCoalGenerator extends TileEnergyInvBase implements ITickable {
     public void update() {
         boolean flag = (this.isBurning() && this.burn);
 
-        if(this.world != null) {
+        if (this.world != null) {
             // Check if stored energy is greater then max capacity
             if (this.energyStorage.isFull()) {
                 this.energyStorage.setEnergy(this.energyStorage.getCapacity());
@@ -250,17 +249,20 @@ public class TileCoalGenerator extends TileEnergyInvBase implements ITickable {
      * DOESN'T WORK YET!
      */
     private int getEnergyFromCoal(ItemStack stack) {
-        Item item = stack.getItem();
+        if (stack.isEmpty()) {
+            return 0;
+        } else {
+            int burnTime = net.minecraftforge.event.ForgeEventFactory.getItemBurnTime(stack);
+            if (burnTime >= 0) return burnTime;
+            Item item = stack.getItem();
 
-        if (item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.AIR) {
-            Block block = Block.getBlockFromItem(item);
-
-            if (block == Blocks.COAL_BLOCK)
+            if (item == Item.getItemFromBlock(Blocks.COAL_BLOCK)) {
                 return 2000;
+            } else if (item == Items.COAL) {
+                return 200;
+            } else {
+                return 100;
+            }
         }
-        if (item == Items.COAL)
-            return 200;
-
-        return 100;
     }
 }

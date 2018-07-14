@@ -15,19 +15,14 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import javax.annotation.Nullable;
-
 public class BlockCoalGenerator extends BlockBaseGenerator {
-
-    private static boolean keepInventory;
 
     public BlockCoalGenerator(String name) {
         super(name, Material.IRON);
     }
 
-    @Nullable
     @Override
-    public TileEntity createNewTileEntity(World worldIn, int meta) {
+    public TileEntity createNewTileEntityAb(World worldIn, int meta) {
         return new TileCoalGenerator();
     }
 
