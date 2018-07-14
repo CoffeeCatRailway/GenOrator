@@ -2,14 +2,11 @@ package coffeecatteam.gen_o_rator.objects.blocks;
 
 import coffeecatteam.gen_o_rator.GenOrator;
 import coffeecatteam.gen_o_rator.init.InitBlock;
-import coffeecatteam.gen_o_rator.objects.blocks.base.BlockBaseFacingContainer;
+import coffeecatteam.gen_o_rator.objects.blocks.base.BlockBaseGenerator;
 import coffeecatteam.gen_o_rator.objects.tileentity.TileCoalGenerator;
 import coffeecatteam.gen_o_rator.util.GuiHandler;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.tileentity.TileEntity;
@@ -20,7 +17,7 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-public class BlockCoalGenerator extends BlockBaseFacingContainer {
+public class BlockCoalGenerator extends BlockBaseGenerator {
 
     private static boolean keepInventory;
 

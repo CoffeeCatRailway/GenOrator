@@ -25,15 +25,15 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public abstract class BlockBaseFacingContainer extends BlockContainer {
+public abstract class BlockBaseGenerator extends BlockContainer {
 
     protected static final PropertyDirection FACING = BlockHorizontal.FACING;
 
-    public BlockBaseFacingContainer(String name, Material material) {
+    public BlockBaseGenerator(String name, Material material) {
         this(name, material, 2.0F, 1.0F);
     }
 
-    public BlockBaseFacingContainer(String name, Material material, float hardness, float resistance) {
+    public BlockBaseGenerator(String name, Material material, float hardness, float resistance) {
         super(material);
         setUnlocalizedName(name);
         setRegistryName(name);
