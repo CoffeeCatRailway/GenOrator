@@ -1,26 +1,15 @@
-package coffeecatteam.gen_o_rator.objects.tileentity;
+package coffeecatteam.gen_o_rator.objects.tileentity.generators;
 
-import coffeecatteam.gen_o_rator.init.InitBlock;
-import coffeecatteam.gen_o_rator.objects.blocks.BlockCoalGenerator;
 import coffeecatteam.gen_o_rator.objects.blocks.base.BlockBaseGenerator;
+import coffeecatteam.gen_o_rator.objects.blocks.generators.BlockCoalGenerator;
 import coffeecatteam.gen_o_rator.objects.tileentity.base.TileBaseGenerator;
-import coffeecatteam.gen_o_rator.objects.tileentity.base.TileEnergyInvBase;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
-import net.minecraft.util.ITickable;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class TileCoalGenerator extends TileBaseGenerator {
 
@@ -42,8 +31,21 @@ public class TileCoalGenerator extends TileBaseGenerator {
     }
 
     @Override
+    public NBTTagCompound writeToNBT(NBTTagCompound compound) {
+        compound.setInteger("energyStored", this.energyStorage.getEnergyStored());
+        return super.writeToNBT(compound);
+    }
+
+    @Override
+    public void readFromNBT(NBTTagCompound compound) {
+        this.energyStorage.setEnergy(compound.getInteger("energyStored"));
+        super.readFromNBT(compound);
+    }
+
+    @Override
     public void update() {
         boolean flag = (this.isBurning() && this.burn);
+        boolean flag1 = false;
 
         if (this.world != null) {
             // Check if stored energy is greater then max capacity
@@ -58,6 +60,7 @@ public class TileCoalGenerator extends TileBaseGenerator {
 
                 // Cooldown
                 if (burn) {
+                    flag1 = true;
                     this.cooldown--;
 
                     // Check if cooldown is done
@@ -69,8 +72,10 @@ public class TileCoalGenerator extends TileBaseGenerator {
                 }
 
                 // Add energy to storage if burning
-                if (isBurning() && this.burn)
+                if (isBurning() && this.burn) {
                     this.energyStorage.addEnergy(getEnergyFromCoal(stack) / 10);
+                    flag1 = true;
+                }
             }
 
             // Output energy if stored energy is greater then 0
@@ -78,11 +83,13 @@ public class TileCoalGenerator extends TileBaseGenerator {
                 this.outputEnergy();
 
             if (flag != (this.isBurning() && this.burn)) {
+                flag1 = true;
                 BlockCoalGenerator.setState((this.isBurning() && this.burn), this.world, this.pos);
             }
-
-            this.markDirty();
         }
+
+        if (flag1)
+            this.markDirty();
     }
 
     /*

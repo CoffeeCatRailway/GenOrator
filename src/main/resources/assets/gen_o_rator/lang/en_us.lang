@@ -23,9 +23,13 @@ item.plastic.name=Plastic
 item.sap_collector.name=Sap Collector
 
 # Blocks
-tile.coal_generator.name=Coal Generator §c§lWIP§r
-tile.coal_generator_active.name=Coal Generator §c§lWIP§r
+tile.coal_generator.name=Coal Generator
+tile.coal_generator_active.name=Coal Generator
 tile.coal_generator.info=Burn coal to generate RF. 1 stack of coal will generate approx 130,000 RF.
+
+
+tile.end_crystal_generator.name=End Crystal Generator
+tile.end_crystal_generator.info=Burn end crystals to generate RF. 1 stack of end crystals of coal will generate approx 260,000 RF.
 
 tile.cable_iron.name=Iron Cable
 tile.cable_silver.name=Silver Cable

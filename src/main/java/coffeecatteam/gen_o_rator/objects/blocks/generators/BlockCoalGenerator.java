@@ -1,9 +1,9 @@
-package coffeecatteam.gen_o_rator.objects.blocks;
+package coffeecatteam.gen_o_rator.objects.blocks.generators;
 
 import coffeecatteam.gen_o_rator.GenOrator;
 import coffeecatteam.gen_o_rator.init.InitBlock;
 import coffeecatteam.gen_o_rator.objects.blocks.base.BlockBaseGenerator;
-import coffeecatteam.gen_o_rator.objects.tileentity.TileCoalGenerator;
+import coffeecatteam.gen_o_rator.objects.tileentity.generators.TileCoalGenerator;
 import coffeecatteam.gen_o_rator.util.GuiHandler;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

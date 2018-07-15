@@ -3,11 +3,14 @@ package coffeecatteam.gen_o_rator.init;
 import coffeecatteam.gen_o_rator.GenOrator;
 import coffeecatteam.gen_o_rator.Reference;
 import coffeecatteam.gen_o_rator.objects.blocks.BlockCable;
-import coffeecatteam.gen_o_rator.objects.blocks.BlockCoalGenerator;
+import coffeecatteam.gen_o_rator.objects.blocks.generators.BlockCoalGenerator;
 import coffeecatteam.gen_o_rator.objects.blocks.BlockDriedUpLog;
 import coffeecatteam.gen_o_rator.objects.blocks.base.BlockBase;
+import coffeecatteam.gen_o_rator.objects.blocks.generators.BlockEndCrystalGenerator;
 import coffeecatteam.gen_o_rator.objects.tileentity.TileCable;
-import coffeecatteam.gen_o_rator.objects.tileentity.TileCoalGenerator;
+import coffeecatteam.gen_o_rator.objects.tileentity.base.TileBaseGenerator;
+import coffeecatteam.gen_o_rator.objects.tileentity.generators.TileCoalGenerator;
+import coffeecatteam.gen_o_rator.objects.tileentity.generators.TileEndCrystalGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
@@ -19,6 +22,8 @@ public class InitBlock {
     /* Generators */
     public static final Block COAL_GENERATOR = new BlockCoalGenerator("coal_generator");
     public static final Block COAL_GENERATOR_ACTIVE = new BlockCoalGenerator("coal_generator_active");
+
+    public static final Block END_CRYSTAL_GENERATOR = new BlockEndCrystalGenerator("end_crystal_generator");
 
     /* Cables */
     public static final Block CABLE_IRON = new BlockCable("iron", "blockCable", 500, 50, 50);
@@ -35,17 +40,25 @@ public class InitBlock {
     public static final Block DRIED_UP_LOG = new BlockDriedUpLog("dried_up_log", GenOrator.TAB);
 
 	public static void init() {
+	    // Generators
         registerGenerator(COAL_GENERATOR, COAL_GENERATOR_ACTIVE);
+        register(END_CRYSTAL_GENERATOR);
+
+        // Cables
         register(CABLE_IRON, CABLE_SILVER, CABLE_ALUMINIUM, CABLE_COPPER);
 
+        // Ores
         register(ORE_SILVER, ORE_ALUMINIUM, ORE_COPPER);
 
+        // Other
         //register(DRIED_UP_LOG);
 	}
 
 	public static void registerTileEntities() {
-        GameRegistry.registerTileEntity(TileCoalGenerator.class, Reference.MODID+":coal_generator");
-        GameRegistry.registerTileEntity(TileCable.class, Reference.MODID+":cable");
+	    GameRegistry.registerTileEntity(TileCoalGenerator.class, Reference.MODID + ":coal_generator");
+        GameRegistry.registerTileEntity(TileEndCrystalGenerator.class, Reference.MODID + ":end_crystal_generator");
+
+        GameRegistry.registerTileEntity(TileCable.class, Reference.MODID + ":cable");
     }
 
     private static void registerGenerator(Block idle, Block active) {
