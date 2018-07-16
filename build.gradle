@@ -19,14 +19,14 @@ compileJava {
 }
 
 minecraft {
-    version = "1.12.2-14.23.3.2655"
+    version = "1.12.2-14.23.4.2705"
     runDir = "run"
-
+    
     mappings = "snapshot_20171003"
 }
 
 dependencies {
-
+    
 }
 
 processResources {
@@ -35,10 +35,10 @@ processResources {
 
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
-
+        
         expand 'version':project.version, 'mcversion':project.minecraft.version
     }
-
+    
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }

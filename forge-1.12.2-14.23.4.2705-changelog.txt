@@ -1,5 +1,191 @@
 Changelog:
-Build 2655:
+Build 2705:
+	bs2609: Fix crash from search tree processing invalid recipes (#4942)
+
+Build 1.12.2-14.23.4.2704:
+	LexManos:
+		Fix names in JSON annotation data not matching expected format. Closes
+		#4953
+
+Build 1.12.2-14.23.4.2703:
+	LexManos:
+		Add potential support for models defining 'vanilla like' rotations in
+		Forge's Modified Blockstate format.
+	LexManos: Bump version in prep for new RB.
+
+Build 1.12.2-14.23.3.2702:
+	LexManos:
+		Copy the Dedicated server's EULA checking to main() function so it can
+		exit earlier. Closes #3659, #3661
+
+Build 1.12.2-14.23.3.2701:
+	bs2609: Fix Forge bucket not declaring all texture dependencies (#4930)
+
+Build 1.12.2-14.23.3.2700:
+	bs2609: Reuse multipart model instances across variants (#4791)
+
+Build 1.12.2-14.23.3.2699:
+	mezz: Fix language parsing for creating the java locale
+
+Build 1.12.2-14.23.3.2698:
+	thilo: Fixes parameter inconsistency in IFieldWrapper (Fixes #4325) (#4766)
+
+Build 1.12.2-14.23.3.2697:
+	latvianmodder: Added formatting support for status messages (#4925)
+
+Build 1.12.2-14.23.3.2696:
+	bs2609: Fix memory leaks in EnchantmentHelper (MC-128547) (#4880)
+	bs2609: Fix server-side data not being released (#4882)
+
+Build 1.12.2-14.23.3.2695:
+	bs2609:
+		Change composite models to fetch quads from submodels using full context
+		(#4809)
+
+Build 1.12.2-14.23.3.2694:
+	bs2609: Add an event to control nether portal formation (#4735)
+	bs2609: Check name prefix used for tile entity registrations (#4681)
+	34900092+temp1011: Expand Villager Farmer AI to generic crops. (#4745)
+
+Build 1.12.2-14.23.3.2693:
+	bs2609: Allow custom models to have per-state lighting (#4732)
+
+Build 1.12.2-14.23.3.2692:
+	bs2609: Fix some light-emitting blocks letting light through (MC-119932) (#4642)
+
+Build 1.12.2-14.23.3.2691:
+	34900092+temp1011: Preserve original ChunkPos for decoration events. (#4767)
+
+Build 1.12.2-14.23.3.2690:
+	LexManos: Fix library folder detection on various JVMs.
+
+Build 1.12.2-14.23.3.2689:
+	diesieben07: Add supports for redirects when doing mod version checks (#4826)
+
+Build 1.12.2-14.23.3.2688:
+	mezz:
+		Give immediate and complete error messages when there is a crash during
+		startup (#4869)
+	mezz: Fix imports
+
+Build 1.12.2-14.23.3.2686:
+	mezz:
+		Revert "Give immediate and complete error messages when there is a crash
+		during startup (#4869)"
+		This reverts commit a38f5fd6a24297490671cd300b5e4a9020189f63.
+
+Build 1.12.2-14.23.3.2685:
+	mezz: Remove invalid optimization in ItemStackHandler#setStackInSlot #3465
+
+Build 1.12.2-14.23.3.2684:
+	mezz:
+		Give immediate and complete error messages when there is a crash during
+		startup (#4869)
+
+Build 1.12.2-14.23.3.2683:
+	bs2609: Clean up mod dependency checking code (#4922)
+
+Build 1.12.2-14.23.3.2682:
+	mezz: Fix version range check for required mods #4918
+
+Build 1.12.2-14.23.3.2681:
+	mezz: Fix possible NPE when calling Loader.getIndexedModList #4919
+	mezz:
+		Add javadoc note about minimum required Forge versions for old Forge.
+		Close #4918
+
+Build 1.12.2-14.23.3.2680:
+	tterrag1098: Fix MC-12269 Various Particles glitchy movement (#4914)
+
+Build 1.12.2-14.23.3.2679:
+	bs2609: Fix deobfuscator not regenerating super maps (#4856)
+
+Build 1.12.2-14.23.3.2678:
+	cpw: Clean up broken aliases caused by registry bug #4894. (#4909)
+
+Build 1.12.2-14.23.3.2677:
+	LexManos:
+		Only revert to frozen data on server shutdown on client. Should fix race
+		condition exposed by #4904
+	LexManos: Move registry snapshot read/write code to Snapshot class. Cleaner code.
+
+Build 1.12.2-14.23.3.2676:
+	LexManos:
+		Potentially fix issue with BungeeCord or other servers resetting the
+		registry mappings on the client while the game is running. Errors may
+		still occure if the client knows about world data beyond vanilla.
+		Servers should NEVER send world/registry invocations before they have
+		sent registry mappings. Closes #4901
+
+Build 1.12.2-14.23.3.2675:
+	sfPlayer1: Reduce range requirement for World.checkLightFor from 17 to 16 (#4729)
+
+Build 1.12.2-14.23.3.2674:
+	bs2609: Fix typo in validation of vanilla registry wrappers (#4899)
+
+Build 1.12.2-14.23.3.2673:
+	josephcsible: Fix #4772: add an "isActivator" boolean to powered rails (#4774)
+
+Build 1.12.2-14.23.3.2672:
+	bs2609: Fix some code holding client world references longer than needed (#4881)
+	bs2609:
+		Add checks for undefined packet discriminators when sending messages
+		(#4890)
+
+Build 1.12.2-14.23.3.2671:
+	bs2609: Don't try to render removed tile entities. Fixes MC-123363 (#4811)
+
+Build 1.12.2-14.23.3.2670:
+	LexManos: Fix overrides typo in saving registry data. Closes #4894
+
+Build 1.12.2-14.23.3.2669:
+	LexManos: Fix library path and soft fail when repository root is not found.
+
+Build 1.12.2-14.23.3.2668:
+	LexManos:
+		Fix libraries not being added to the modlist when using external
+		metadata. Closes #4879
+
+Build 1.12.2-14.23.3.2666:
+	bs2609:
+		Fix dragon fight not initialising correctly under some circumstances
+		(#4868)
+
+Build 1.12.2-14.23.3.2665:
+	LexManos:
+		Cleanup some issues with the mod extraction to the memory modlist.
+		Closes #4874 #4875
+
+Build 1.12.2-14.23.3.2664:
+	mezz: Improve missing mod dependency error screen (#4762)
+
+Build 1.12.2-14.23.3.2663:
+	bs2609: Fix biome dictionary's biome type detection (#4878)
+
+Build 1.12.2-14.23.3.2662:
+	bs2609: Clean up Reader/Writer handling to use a specified charset (#4872)
+
+Build 1.12.2-14.23.3.2661:
+	bs2609:
+		Suppress firing events at load time if an error has already occurred
+		(#4801)
+
+Build 1.12.2-14.23.3.2660:
+	AlexIIL: Fix FluidUtil.getFluidHandler skipping some fluid tile entities (#4854)
+
+Build 1.12.2-14.23.3.2659:
+	erlend: Parse contained dependency Timestamp as long instead of int (#4866)
+
+Build 1.12.2-14.23.3.2658:
+	LexManos: Fix Forge's metadata not being loaded. Closes #4865
+
+Build 1.12.2-14.23.3.2657:
+	LexManos: Fix mods without ModSide meta value.
+
+Build 1.12.2-14.23.3.2656:
+	LexManos: Rewrite dependency extraction to use mod list system (#4841)
+
+Build 1.12.2-14.23.3.2655:
 	LexManos: Bump Forge version for new dev chunk.
 
 Build 1.12.2-14.23.2.2654:
