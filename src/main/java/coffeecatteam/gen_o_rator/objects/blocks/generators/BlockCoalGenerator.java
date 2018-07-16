@@ -22,19 +22,19 @@ public class BlockCoalGenerator extends BlockBaseGenerator {
     }
 
     @Override
-    public TileEntity createNewTileEntityAb(World worldIn, int meta) {
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
         return new TileCoalGenerator(this);
     }
 
     @Override
-    public boolean onBlockActivatedAb(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (!world.isRemote)
             player.openGui(GenOrator.instance, GuiHandler.COAL_GENERATOR_GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
         return true;
     }
 
     @Override
-    public void breakBlockAb(World world, BlockPos pos, IBlockState state) {
+    public void breakBlock(World world, BlockPos pos, IBlockState state) {
         if (!keepInventory) {
             TileEntity tileentity = world.getTileEntity(pos);
             if (tileentity instanceof TileCoalGenerator) {
@@ -42,6 +42,7 @@ public class BlockCoalGenerator extends BlockBaseGenerator {
                 world.updateComparatorOutputLevel(pos, this);
             }
         }
+        super.breakBlock(world, pos, state);
     }
 
     public static void setState(boolean active, World world, BlockPos pos) {

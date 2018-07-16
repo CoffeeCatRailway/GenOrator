@@ -3,6 +3,7 @@ package coffeecatteam.gen_o_rator.objects.blocks.base;
 import coffeecatteam.gen_o_rator.GenOrator;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
@@ -12,12 +13,9 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
@@ -26,7 +24,7 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public abstract class BlockBaseGenerator extends BlockContainer {
+public abstract class BlockBaseGenerator extends BlockContainer implements ITileEntityProvider {
 
     protected static boolean keepInventory;
     protected static final PropertyDirection FACING = BlockHorizontal.FACING;
@@ -45,27 +43,9 @@ public abstract class BlockBaseGenerator extends BlockContainer {
         this.setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 
-    @Nullable
     @Override
-    public TileEntity createNewTileEntity(World world, int meta) {
-        return createNewTileEntityAb(world, meta);
-    }
-
-    public abstract TileEntity createNewTileEntityAb(World world, int meta);
-
-    public abstract boolean onBlockActivatedAb(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ);
-
-    @Override
-    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-        return this.onBlockActivatedAb(world, pos, state, player, hand, facing, hitX, hitY, hitZ);
-    }
-
-    public abstract void breakBlockAb(World world, BlockPos pos, IBlockState state);
-
-    @Override
-    public void breakBlock(World world, BlockPos pos, IBlockState state) {
-        this.breakBlockAb(world, pos, state);
-        super.breakBlock(world, pos, state);
+    public boolean hasTileEntity() {
+        return true;
     }
 
     @Override

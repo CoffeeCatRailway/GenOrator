@@ -30,19 +30,19 @@ public class BlockEndCrystalGenerator extends BlockBaseGenerator {
     }
 
     @Override
-    public TileEntity createNewTileEntityAb(World world, int meta) {
+    public TileEntity createNewTileEntity(World world, int meta) {
         return new TileEndCrystalGenerator(this);
     }
 
     @Override
-    public boolean onBlockActivatedAb(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (!world.isRemote)
             player.openGui(GenOrator.instance, GuiHandler.END_CRYSTAL_GENERATOR_GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
         return true;
     }
 
     @Override
-    public void breakBlockAb(World world, BlockPos pos, IBlockState state) {
+    public void breakBlock(World world, BlockPos pos, IBlockState state) {
         if (!keepInventory) {
             TileEntity tileentity = world.getTileEntity(pos);
             if (tileentity instanceof TileEndCrystalGenerator) {
@@ -50,5 +50,6 @@ public class BlockEndCrystalGenerator extends BlockBaseGenerator {
                 world.updateComparatorOutputLevel(pos, this);
             }
         }
+        super.breakBlock(world, pos, state);
     }
 }
