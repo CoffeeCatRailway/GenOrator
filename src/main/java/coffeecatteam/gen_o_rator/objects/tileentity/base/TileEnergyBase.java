@@ -18,6 +18,18 @@ public abstract class TileEnergyBase extends TileEntity {
         this.energyStorage = new CGEnergyStorage(capacity, maxReceive, maxExtract, energy);
     }
 
+    @Override
+    public NBTTagCompound writeToNBT(NBTTagCompound compound) {
+        compound.setInteger("energyStored", this.energyStorage.getEnergyStored());
+        return super.writeToNBT(compound);
+    }
+
+    @Override
+    public void readFromNBT(NBTTagCompound compound) {
+        this.energyStorage.setEnergy(compound.getInteger("energyStored"));
+        super.readFromNBT(compound);
+    }
+
     protected void outputEnergy() {
         for (EnumFacing facing : EnumFacing.values()) {
             BlockPos pos = getPos().offset(facing);

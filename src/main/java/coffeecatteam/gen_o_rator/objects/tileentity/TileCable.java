@@ -11,18 +11,6 @@ public class TileCable extends TileEnergyBase implements ITickable {
     }
 
     @Override
-    public NBTTagCompound writeToNBT(NBTTagCompound compound) {
-        compound.setInteger("energyStored", this.energyStorage.getEnergyStored());
-        return super.writeToNBT(compound);
-    }
-
-    @Override
-    public void readFromNBT(NBTTagCompound compound) {
-        this.energyStorage.setEnergy(compound.getInteger("energyStored"));
-        super.readFromNBT(compound);
-    }
-
-    @Override
     public void update() {
         if(this.world != null) {
             this.outputEnergy();

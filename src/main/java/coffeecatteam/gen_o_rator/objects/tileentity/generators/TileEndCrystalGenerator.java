@@ -27,19 +27,9 @@ public class TileEndCrystalGenerator extends TileBaseGenerator {
     }
 
     @Override
-    public NBTTagCompound writeToNBT(NBTTagCompound compound) {
-        compound.setInteger("energyStored", this.energyStorage.getEnergyStored());
-        return super.writeToNBT(compound);
-    }
-
-    @Override
-    public void readFromNBT(NBTTagCompound compound) {
-        this.energyStorage.setEnergy(compound.getInteger("energyStored"));
-        super.readFromNBT(compound);
-    }
-
-    @Override
     public void update() {
+        boolean flag1 = false;
+
         if (this.world != null) {
             // Check if stored energy is greater then max capacity
             if (this.energyStorage.isFull()) {
@@ -53,6 +43,7 @@ public class TileEndCrystalGenerator extends TileBaseGenerator {
 
                 // Cooldown
                 if (burn) {
+                    flag1 = true;
                     this.cooldown--;
 
                     // Check if cooldown is done
@@ -64,15 +55,18 @@ public class TileEndCrystalGenerator extends TileBaseGenerator {
                 }
 
                 // Add energy to storage if burning
-                if (isBurning() && this.burn)
+                if (isBurning() && this.burn) {
                     this.energyStorage.addEnergy(40);
+                    flag1 = true;
+                }
             }
 
             // Output energy if stored energy is greater then 0
             if (this.energyStorage.getEnergyStored() > 0)
                 this.outputEnergy();
-
-            this.markDirty();
         }
+
+        if (flag1)
+            this.markDirty();
     }
 }

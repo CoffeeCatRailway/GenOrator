@@ -6,19 +6,16 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
-import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.items.CapabilityItemHandler;
 
-import javax.annotation.Nullable;
+public abstract class TileBaseGenerator extends TileEnergyBase implements IInventory, ITickable {
 
-public abstract class TileBaseGenerator extends TileEnergyInvBase implements ITickable {
+    private int extraFieldCount;
 
     protected int maxCooldown = 100;
     protected int cooldown = maxCooldown;
@@ -37,9 +34,10 @@ public abstract class TileBaseGenerator extends TileEnergyInvBase implements ITi
     }
 
     public TileBaseGenerator(BlockBaseGenerator generator, int capacity, int maxReceive, int maxExtract, int energy, int extraFieldCount, int inventorySize) {
-        super(capacity, maxReceive, maxExtract, energy, 2 + extraFieldCount);
+        super(capacity, maxReceive, maxExtract, energy);
         inventory = NonNullList.<ItemStack>withSize(inventorySize, ItemStack.EMPTY);
         this.generator = generator;
+        this.extraFieldCount = extraFieldCount;
     }
 
     @Override
@@ -167,18 +165,28 @@ public abstract class TileBaseGenerator extends TileEnergyInvBase implements ITi
     @Override
     public int getField(int id) {
         switch (id) {
+            case 0:
+                return this.energyStorage.getEnergyStored();
+            case 1:
+                return this.energyStorage.getMaxEnergyStored();
             case 2:
                 return this.cooldown;
             case 3:
                 return this.maxCooldown;
+            default:
+                return 0;
         }
-        return super.getField(id);
     }
 
     @Override
     public void setField(int id, int value) {
-        super.setField(id, value);
         switch (id) {
+            case 0:
+                this.energyStorage.setEnergy(value);
+                break;
+            case 1:
+                this.energyStorage.setCapacity(value);
+                break;
             case 2:
                 this.cooldown = value;
                 break;
@@ -186,6 +194,12 @@ public abstract class TileBaseGenerator extends TileEnergyInvBase implements ITi
                 this.maxCooldown = value;
                 break;
         }
+        this.markDirty();
+    }
+
+    @Override
+    public int getFieldCount() {
+        return 4 + this.extraFieldCount;
     }
 
     public boolean isBurning() {
