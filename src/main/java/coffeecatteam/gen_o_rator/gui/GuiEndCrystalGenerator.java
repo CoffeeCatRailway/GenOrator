@@ -40,10 +40,11 @@ public class GuiEndCrystalGenerator extends GuiBaseGenerator {
         this.mc.getTextureManager().bindTexture(TEXTURES);
         this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
 
-//        if (TileEndCrystalGenerator.isBurning(this.generator)) {
-//            int k = Utils.getBurnTime(this.generator, 13);
-//            this.drawTexturedModalRect(this.guiLeft + 52, this.guiTop + 40 - k, 176, 12 - k, 14, k + 1);
-//        }
+        if (TileEndCrystalGenerator.isBurning(this.generator)) {
+            int k = Utils.getBurnTime(this.generator, 56);
+            this.drawTexturedModalRect(this.guiLeft + 35, this.guiTop + 69 - k, 212, 55 - k, 18, k + 1);
+            this.drawTexturedModalRect(this.guiLeft + 84, this.guiTop + 69 - k, 212, 55 - k, 18, k + 1);
+        }
 
         int l = Utils.getEnergyReading(this.generator, 67);
         this.drawTexturedModalRect(this.guiLeft + 131, this.guiTop + 76 - l, 176, 67 - l, 36, l + 1);
