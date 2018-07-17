@@ -1,16 +1,17 @@
 package coffeecatteam.gen_o_rator.objects.tileentity.generators;
 
-import coffeecatteam.gen_o_rator.objects.blocks.base.BlockBaseGenerator;
+import coffeecatteam.gen_o_rator.init.InitBlock;
 import coffeecatteam.gen_o_rator.objects.tileentity.base.TileBaseGenerator;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 
 public class TileEndCrystalGenerator extends TileBaseGenerator {
 
-    public TileEndCrystalGenerator(BlockBaseGenerator generator) {
-        super(generator, 200000, 0, 100, 0);
+    public float innerRotation = 0.0f;
+
+    public TileEndCrystalGenerator() {
+        super(InitBlock.END_CRYSTAL_GENERATOR, 200000, 0, 100, 0);
     }
 
     @Override
@@ -42,20 +43,20 @@ public class TileEndCrystalGenerator extends TileBaseGenerator {
                     this.burn = true;
 
                 // Cooldown
-                if (burn) {
+                if (this.burn) {
                     flag1 = true;
-                    this.cooldown--;
+                    this.cooldown++;
 
                     // Check if cooldown is done
-                    if (this.cooldown <= 0) {
-                        this.cooldown = maxCooldown;
+                    if (this.cooldown >= this.maxCooldown) {
+                        this.cooldown = 0;
                         stack.shrink(1);
                         this.burn = false;
                     }
                 }
 
                 // Add energy to storage if burning
-                if (isBurning() && this.burn) {
+                if (this.isBurning() && this.burn) {
                     this.energyStorage.addEnergy(40);
                     flag1 = true;
                 }

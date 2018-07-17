@@ -1,6 +1,6 @@
 package coffeecatteam.gen_o_rator.objects.tileentity.generators;
 
-import coffeecatteam.gen_o_rator.objects.blocks.base.BlockBaseGenerator;
+import coffeecatteam.gen_o_rator.init.InitBlock;
 import coffeecatteam.gen_o_rator.objects.blocks.generators.BlockCoalGenerator;
 import coffeecatteam.gen_o_rator.objects.tileentity.base.TileBaseGenerator;
 import net.minecraft.entity.player.EntityPlayer;
@@ -8,13 +8,12 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class TileCoalGenerator extends TileBaseGenerator {
 
-    public TileCoalGenerator(BlockBaseGenerator generator) {
-        super(generator,100000, 0, 50, 0);
+    public TileCoalGenerator() {
+        super(InitBlock.COAL_GENERATOR,100000, 0, 50, 0);
     }
 
     @Override
@@ -47,20 +46,20 @@ public class TileCoalGenerator extends TileBaseGenerator {
                     this.burn = true;
 
                 // Cooldown
-                if (burn) {
+                if (this.burn) {
                     flag1 = true;
-                    this.cooldown--;
+                    this.cooldown++;
 
                     // Check if cooldown is done
-                    if (this.cooldown <= 0) {
-                        this.cooldown = maxCooldown;
+                    if (this.cooldown >= this.maxCooldown) {
+                        this.cooldown = 0;
                         stack.shrink(1);
                         this.burn = false;
                     }
                 }
 
                 // Add energy to storage if burning
-                if (isBurning() && this.burn) {
+                if (this.isBurning() && this.burn) {
                     this.energyStorage.addEnergy(getEnergyFromCoal(stack) / 10);
                     flag1 = true;
                 }
