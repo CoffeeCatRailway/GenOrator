@@ -23,7 +23,7 @@ public class BlockCoalGenerator extends BlockBaseGenerator {
 
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TileCoalGenerator(this);
+        return new TileCoalGenerator();
     }
 
     @Override

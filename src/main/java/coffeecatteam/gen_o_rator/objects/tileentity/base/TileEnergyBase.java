@@ -8,6 +8,7 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.energy.IEnergyStorage;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public abstract class TileEnergyBase extends TileEntity {
@@ -18,16 +19,18 @@ public abstract class TileEnergyBase extends TileEntity {
         this.energyStorage = new CGEnergyStorage(capacity, maxReceive, maxExtract, energy);
     }
 
+    @Nonnull
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {
+        super.writeToNBT(compound);
         compound.setInteger("energyStored", this.energyStorage.getEnergyStored());
-        return super.writeToNBT(compound);
+        return compound;
     }
 
     @Override
     public void readFromNBT(NBTTagCompound compound) {
-        this.energyStorage.setEnergy(compound.getInteger("energyStored"));
         super.readFromNBT(compound);
+        this.energyStorage.setEnergy(compound.getInteger("energyStored"));
     }
 
     protected void outputEnergy() {

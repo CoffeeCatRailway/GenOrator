@@ -3,12 +3,12 @@ package coffeecatteam.gen_o_rator.init;
 import coffeecatteam.gen_o_rator.GenOrator;
 import coffeecatteam.gen_o_rator.Reference;
 import coffeecatteam.gen_o_rator.objects.blocks.BlockCable;
-import coffeecatteam.gen_o_rator.objects.blocks.generators.BlockCoalGenerator;
 import coffeecatteam.gen_o_rator.objects.blocks.BlockDriedUpLog;
 import coffeecatteam.gen_o_rator.objects.blocks.base.BlockBase;
+import coffeecatteam.gen_o_rator.objects.blocks.base.BlockBaseGenerator;
+import coffeecatteam.gen_o_rator.objects.blocks.generators.BlockCoalGenerator;
 import coffeecatteam.gen_o_rator.objects.blocks.generators.BlockEndCrystalGenerator;
 import coffeecatteam.gen_o_rator.objects.tileentity.TileCable;
-import coffeecatteam.gen_o_rator.objects.tileentity.base.TileBaseGenerator;
 import coffeecatteam.gen_o_rator.objects.tileentity.generators.TileCoalGenerator;
 import coffeecatteam.gen_o_rator.objects.tileentity.generators.TileEndCrystalGenerator;
 import net.minecraft.block.Block;
@@ -20,10 +20,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class InitBlock {
 
     /* Generators */
-    public static final Block COAL_GENERATOR = new BlockCoalGenerator("coal_generator");
-    public static final Block COAL_GENERATOR_ACTIVE = new BlockCoalGenerator("coal_generator_active");
+    public static final BlockBaseGenerator COAL_GENERATOR = new BlockCoalGenerator("coal_generator");
+    public static final BlockBaseGenerator COAL_GENERATOR_ACTIVE = new BlockCoalGenerator("coal_generator_active");
 
-    public static final Block END_CRYSTAL_GENERATOR = new BlockEndCrystalGenerator("end_crystal_generator");
+    public static final BlockBaseGenerator END_CRYSTAL_GENERATOR = new BlockEndCrystalGenerator("end_crystal_generator");
 
     /* Cables */
     public static final Block CABLE_IRON = new BlockCable("iron", "blockCable", 500, 50, 50);

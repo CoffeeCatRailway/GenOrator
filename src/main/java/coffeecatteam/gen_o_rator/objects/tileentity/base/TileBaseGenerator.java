@@ -13,6 +13,8 @@ import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nonnull;
+
 public abstract class TileBaseGenerator extends TileEnergyBase implements IInventory, ITickable {
 
     private int extraFieldCount;
@@ -132,8 +134,10 @@ public abstract class TileBaseGenerator extends TileEnergyBase implements IInven
             setInventorySlotContents(i, ItemStack.EMPTY);
     }
 
+    @Nonnull
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {
+        super.writeToNBT(compound);
         NBTTagList list = new NBTTagList();
         for (int i = 0; i < getSizeInventory(); i++) {
             if (getStackInSlot(i) != ItemStack.EMPTY) {
@@ -146,11 +150,12 @@ public abstract class TileBaseGenerator extends TileEnergyBase implements IInven
         compound.setTag("Items", list);
         compound.setInteger("cooldown", this.cooldown);
         compound.setBoolean("burn", this.burn);
-        return super.writeToNBT(compound);
+        return compound;
     }
 
     @Override
     public void readFromNBT(NBTTagCompound compound) {
+        super.readFromNBT(compound);
         NBTTagList list = compound.getTagList("Items", 10);
         for (int i = 0; i < list.tagCount(); i++) {
             NBTTagCompound stackTag = list.getCompoundTagAt(i);
@@ -159,7 +164,6 @@ public abstract class TileBaseGenerator extends TileEnergyBase implements IInven
         }
         this.cooldown = compound.getInteger("cooldown");
         this.burn = compound.getBoolean("burn");
-        super.readFromNBT(compound);
     }
 
     @Override

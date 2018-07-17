@@ -31,7 +31,7 @@ public class BlockEndCrystalGenerator extends BlockBaseGenerator {
 
     @Override
     public TileEntity createNewTileEntity(World world, int meta) {
-        return new TileEndCrystalGenerator(this);
+        return new TileEndCrystalGenerator();
     }
 
     @Override
