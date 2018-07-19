@@ -132,8 +132,27 @@ public class BlockCable extends BlockBase implements ITileEntityProvider, IOreDi
     private static final Bounds DOUBLE_VERTICLE = new Bounds(4, 0, 4, 12, 16, 12);
     private static final Bounds DOUBLE_SIDE = new Bounds(0, 4, 4, 16, 12, 12);
 
+    private static final Bounds CORNER_TOP = new Bounds(4, 4, 4, 12, 16, 16);
+    private static final Bounds CORNER_BOTTOM = new Bounds(4, 0, 4, 12, 12, 16);
+    private static final Bounds CORNER_SIDE = new Bounds(4, 4, 4, 16, 12, 16);
+
     private static final Bounds CORNER_DOUBLE_TOP = new Bounds(4, 0, 4, 16, 12, 16);
     private static final Bounds CORNER_DOUBLE_BOTTOM = new Bounds(4, 4, 4, 16, 16, 16);
+
+    private static final Bounds CORNER_T_JOINT_TOP = new Bounds(0, 4, 0, 12, 16, 16);
+    private static final Bounds CORNER_T_JOINT_BOTTOM = new Bounds(0, 0, 0, 12, 12, 16);
+
+    private static final Bounds T_JOINT_SIDE_H = new Bounds(4, 4, 0, 16, 12, 16);
+    private static final Bounds T_JOINT_SIDE_V = new Bounds(4, 0, 0, 12, 16, 12);
+    private static final Bounds T_JOINT_TOP = new Bounds(4, 4, 0, 12, 16, 16);
+    private static final Bounds T_JOINT_BOTTOM = new Bounds(4, 0, 0, 12, 12, 16);
+
+    private static final Bounds X_JOINT_V = new Bounds(0, 0, 4, 16, 16, 12);
+    private static final Bounds X_JOINT_H = new Bounds(0, 4, 0, 16, 12, 16);
+
+    private static final Bounds XT_JOINT_SIDE = new Bounds(0, 0, 0, 12, 16, 16);
+    private static final Bounds XT_JOINT_TOP = new Bounds(0, 4, 0, 16, 16, 16);
+    private static final Bounds XT_JOINT_BOTTOM = new Bounds(0, 0, 0, 16, 12, 16);
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess world, BlockPos pos) {
@@ -192,6 +211,100 @@ public class BlockCable extends BlockBase implements ITileEntityProvider, IOreDi
             box = CORNER_DOUBLE_BOTTOM.getRotation(EnumFacing.WEST);
         if (back && !forward && !left && right && up && !down)
             box = CORNER_DOUBLE_BOTTOM.getRotation(EnumFacing.EAST);
+
+        if (!back && forward && left && right && up && !down)
+            box = CORNER_T_JOINT_TOP.getRotation(EnumFacing.SOUTH);
+        if (back && !forward && left && right && up && !down)
+            box = CORNER_T_JOINT_TOP.getRotation(EnumFacing.NORTH);
+        if (back && forward && !left && right && up && !down)
+            box = CORNER_T_JOINT_TOP.getRotation(EnumFacing.WEST);
+        if (back && forward && left && !right && up && !down)
+            box = CORNER_T_JOINT_TOP.getRotation(EnumFacing.EAST);
+
+        if (!back && forward && left && right && !up && down)
+            box = CORNER_T_JOINT_BOTTOM.getRotation(EnumFacing.SOUTH);
+        if (back && !forward && left && right && !up && down)
+            box = CORNER_T_JOINT_BOTTOM.getRotation(EnumFacing.NORTH);
+        if (back && forward && !left && right && !up && down)
+            box = CORNER_T_JOINT_BOTTOM.getRotation(EnumFacing.WEST);
+        if (back && forward && left && !right && !up && down)
+            box = CORNER_T_JOINT_BOTTOM.getRotation(EnumFacing.EAST);
+
+        if (back && !forward && left && right && !up && !down)
+            box = T_JOINT_SIDE_H.getRotation(EnumFacing.SOUTH);
+        if (!back && forward && left && right && !up && !down)
+            box = T_JOINT_SIDE_H.getRotation(EnumFacing.NORTH);
+        if (back && forward && left && !right && !up && !down)
+            box = T_JOINT_SIDE_H.getRotation(EnumFacing.WEST);
+        if (back && forward && !left && right && !up && !down)
+            box = T_JOINT_SIDE_H.getRotation(EnumFacing.EAST);
+
+        if (!back && !forward && left && right && up && !down)
+            box = T_JOINT_TOP.getRotation(EnumFacing.SOUTH);
+        if (back && forward && !left && !right && up && !down)
+            box = T_JOINT_TOP.getRotation(EnumFacing.WEST);
+
+        if (!back && !forward && left && right && !up && down)
+            box = T_JOINT_BOTTOM.getRotation(EnumFacing.SOUTH);
+        if (back && forward && !left && !right && !up && down)
+            box = T_JOINT_BOTTOM.getRotation(EnumFacing.WEST);
+
+        if (!back && !forward && !left && right && up && down)
+            box = T_JOINT_SIDE_V.getRotation(EnumFacing.SOUTH);
+        if (!back && !forward && left && !right && up && down)
+            box = T_JOINT_SIDE_V.getRotation(EnumFacing.NORTH);
+        if (back && !forward && !left && !right && up && down)
+            box = T_JOINT_SIDE_V.getRotation(EnumFacing.WEST);
+        if (!back && forward && !left && !right && up && down)
+            box = T_JOINT_SIDE_V.getRotation(EnumFacing.EAST);
+
+        if (!back && !forward && left && !right && up && !down)
+            box = CORNER_TOP.getRotation(EnumFacing.SOUTH);
+        if (!back && !forward && !left && right && up && !down)
+            box = CORNER_TOP.getRotation(EnumFacing.NORTH);
+        if (!back && forward && !left && !right && up && !down)
+            box = CORNER_TOP.getRotation(EnumFacing.WEST);
+        if (back && !forward && !left && !right && up && !down)
+            box = CORNER_TOP.getRotation(EnumFacing.EAST);
+
+        if (!back && !forward && left && !right && !up && down)
+            box = CORNER_BOTTOM.getRotation(EnumFacing.SOUTH);
+        if (!back && !forward && !left && right && !up && down)
+            box = CORNER_BOTTOM.getRotation(EnumFacing.NORTH);
+        if (!back && forward && !left && !right && !up && down)
+            box = CORNER_BOTTOM.getRotation(EnumFacing.WEST);
+        if (back && !forward && !left && !right && !up && down)
+            box = CORNER_BOTTOM.getRotation(EnumFacing.EAST);
+
+        if (back && !forward && left && !right && !up && !down)
+            box = CORNER_SIDE.getRotation(EnumFacing.SOUTH);
+        if (!back && forward && !left && right && !up && !down)
+            box = CORNER_SIDE.getRotation(EnumFacing.NORTH);
+        if (!back && forward && left && !right && !up && !down)
+            box = CORNER_SIDE.getRotation(EnumFacing.WEST);
+        if (back && !forward && !left && right && !up && !down)
+            box = CORNER_SIDE.getRotation(EnumFacing.EAST);
+
+        if (back && forward && !left && !right && up && down)
+            box = X_JOINT_V.getRotation(EnumFacing.SOUTH);
+        if (!back && !forward && left && right && up && down)
+            box = X_JOINT_V.getRotation(EnumFacing.WEST);
+        if (back && forward && left && right && !up && !down)
+            box = X_JOINT_H.getRotation(EnumFacing.SOUTH);
+
+        if (!back && forward && left && right && up && down)
+            box = XT_JOINT_SIDE.getRotation(EnumFacing.SOUTH);
+        if (back && !forward && left && right && up && down)
+            box = XT_JOINT_SIDE.getRotation(EnumFacing.NORTH);
+        if (back && forward && !left && right && up && down)
+            box = XT_JOINT_SIDE.getRotation(EnumFacing.WEST);
+        if (back && forward && left && !right && up && down)
+            box = XT_JOINT_SIDE.getRotation(EnumFacing.EAST);
+
+        if (back && forward && left && right && up && !down)
+            box = XT_JOINT_TOP.getRotation(EnumFacing.SOUTH);
+        if (back && forward && left && right && !up && down)
+            box = XT_JOINT_BOTTOM.getRotation(EnumFacing.SOUTH);
 
         return box;
     }
